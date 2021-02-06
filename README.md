@@ -1,13 +1,31 @@
 # Auxiliary Lines in Planar Geometry
 
-## Preface
+This is a project initiated by Dr. Kai Zhu to translate this booklet on how to use auxiliary lines in planar geometry problems into English.
 
-Proving a proposition in planar geometry is like hiking -- to find a path from the starting point (the problem) to the destination (the conclusion). Yet the path can be a broad highway, or a meandering trail, or -- you may even find yourself in front of a river. 
+If you are interested in helping with the project, please read on.
 
-The auxiliary lines are the bridges to get you across. Such lines are indispensible in many problems, or can drastically simplify the proof in others. Just like there is no universal rule on where or how to build the bridge for any kind of terrain, the auxiliary lines have to be designed for each individual problem. Difficult as it can be for beginners, the process of analyzing the problem and finding the solution is rigorous, creative, interesting and extremely rewarding. This booklet is intended to give you a helping hand.
+## The Notebook
 
-## Basic problems
+To work on the project, you can open the Jupyter Notebook, e.g. with [Google CoLab](https://colab.research.google.com/github/jameslao/Geometry/blob/main/Auxiliary%20Lines.ipynb) or your local [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html) or [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html). If you need another hosted Jupyter environment, please contact the author.
 
-In $\triangle ABC$, $AD$ is a median. $DE$ extends $AD$ and $DE = AD$. Show that $BE \| AC$ and $BE = AC$.
+## Drawings
 
-![](figures/fig1.svg)
+The drawings are done with [Geogebra](https://www.geogebra.org/geometry), specifically, with GeoGebra Classic **5** ([Click to Download](https://download.geogebra.org/installers/5.0/GeoGebra-Windows-Installer-5-0-625-0.exe)), which offers much greater control over exports than its successor 6 does. To make sure the sizes are consistent in the final output, *the width of the drawings should be ~**3 in*** (This can be tricky to see if you use the web version of GeoGebra, but open the properties panel and you'll figure out). Please download the .ggb file from Geogebra and put it in the figures folder.
+
+The *line width*s are set to **2**, *point size*s to **1**, and all colors to **Black**. To change the default settings in GeoGebra Classic 5, go to menu Options - Advanced - Defaults (4th button on the toolbar) and check all the entries there. 
+
+The drawings are then exported to [Asymptote](https://asymptote.sourceforge.io/), which can only be done with GeoGebra Classic. 
+
+Make sure you check the options (highlighted) as follows
+
+![](GeoGebraExport.png)
+
+
+With the .asy file, it is converted into PDF and SVG with Asymptote:
+
+    asy -f pdf fig1.asy
+    asy -f svg fig1.asy
+    
+Et voilà．You can insert the svg file into the notebook.
+
+

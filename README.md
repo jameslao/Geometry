@@ -2,7 +2,7 @@
 
 This is a project initiated by Dr. Kai Zhu to translate this booklet on how to use auxiliary lines in planar geometry problems into English.
 
-If you are interested in helping the project, please read on.
+If you are interested in helping with the project, please read on.
 
 ## The Notebook
 
@@ -21,11 +21,11 @@ Make sure you check the options (highlighted) as follows
 ![](GeoGebraExport.png)
 
 
-With the .asy file, it is converted into PDF and SVG with Asymptote:
+The handling of image size in GeoGebra is pretty peculiar. The graphic elements always uses absolute coordinates in .asy, but the size of the imge is related to the zooming on the screen. To make sure the output is consistent, modify the `size(xxxx cm);` in the generated code to `size(6cm);` 
+
+With the .asy file ready, we can convert it into PDF and SVG with Asymptote:
 
     asy -f pdf fig1.asy
     asy -f svg fig1.asy
     
-Et voilà．You can insert the svg file into the notebook.
-
-
+Et voilà．You can insert the .svg file into the notebook.

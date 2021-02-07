@@ -21,7 +21,7 @@ Make sure you check the options (highlighted) as follows
 ![](GeoGebraExport.png)
 
 
-The handling of image size in GeoGebra is pretty peculiar. The graphic elements always uses absolute coordinates in .asy, but the size of the imge is related to the zooming on the screen. To make sure the output is consistent, modify the `size(xxxx cm);` in the generated code to `size(6cm);` 
+The handling of image size in GeoGebra is pretty peculiar. The graphic elements always uses absolute coordinates in .asy, but the size of the image is related to the zooming on the screen. To make sure the output is consistent, modify the `size(xxxx cm);` in the generated code to `size(6cm);` 
 
 With the .asy file ready, we can convert it into PDF and SVG with Asymptote:
 

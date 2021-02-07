@@ -2,7 +2,7 @@
 
 This is a project initiated by Dr. Kai Zhu to translate this booklet on how to use auxiliary lines in planar geometry problems into English.
 
-If you are interested in helping with the project, please read on.
+If you are interested in helping the project, please read on.
 
 ## The Notebook
 

@@ -1,0 +1,5 @@
+import graph; size(4.592031133079124cm); real lsf=0.5; pen dps=linewidth(0.7)+fontsize(10); defaultpen(dps); pen ds=black; real xmin=-2.0099498122448196,xmax=2.5820813208343045,ymin=-1.6432982519849295,ymax=2.9434788408961587; 
+pair A=(-0.7169727302057978,-0.6971012151339606), B=(0.7698643299727229,0.6382075786416598), C=(-0.9148860671185735,0.4037121303507104), D=(0.7938763281659231,-0.6080792510666612), P=(-0.05691307834669223,-0.10431032960268882); 
+draw(circle((0.,0.),1.),linewidth(0.8)+linetype("4 4")); draw(A--B,linewidth(0.8)); draw(C--D,linewidth(0.8)); 
+dot(A,linewidth(1.pt)+ds); label("$A$",(-0.8488069284799611,-0.8657003026763371),NE*lsf); dot(B,linewidth(1.pt)+ds); label("$B$",(0.7904536133057218,0.6474632743565991),NE*lsf); dot(C,linewidth(1.pt)+ds); label("$C$",(-1.0799846971933267,0.4583178272274821),NE*lsf); dot(D,linewidth(1.pt)+ds); label("$D$",(0.8167238142958769,-0.7238412173294994),NE*lsf); dot(P,linewidth(1.pt)+ds); label("$P$",(-0.12900342134970932,-0.34029628287323427),NE*lsf); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 

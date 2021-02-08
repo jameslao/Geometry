@@ -1,16 +1,16 @@
  /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
-import graph; size(6.2cm); 
+import graph; size(6.300524810596682cm); 
 real labelscalefactor = 0.5; /* changes label-to-point distance */
 pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
 pen dotstyle = black; /* point style */ 
-real xmin = -3., xmax = 3.2, ymin = -3., ymax = 3.;  /* image dimensions */
+real xmin = -3.0050416142609557, xmax = 3.295483196335726, ymin = -2.9935884074028225, ymax = 2.300003214285715;  /* image dimensions */
 
  /* draw figures */
 draw((-2.5505183611387654,-1.9219567429112387)--(-0.8551926682405302,1.931056195493834), linewidth(0.8)); 
 draw((-0.8551926682405302,1.931056195493834)--(2.777631842040108,-1.929116179128497), linewidth(0.8)); 
 draw((-2.5505183611387654,-1.9219567429112387)--(2.777631842040108,-1.929116179128497), linewidth(0.8)); 
 draw((-0.8551926682405302,1.931056195493834)--(0.11355674045067143,-1.9255364610198678), linewidth(0.8)); 
-draw((-1.7028555146896478,0.0045497262912977746)--(0.11355674045067143,-1.9255364610198678), linewidth(0.8) + linetype("2 2")); 
+draw((-1.7028555146896478,0.0045497262912977746)--(0.11355674045067143,-1.9255364610198678), linewidth(0.8) + linetype("4 4")); 
  /* dots and labels */
 dot((-2.5505183611387654,-1.9219567429112387),linewidth(1.pt) + dotstyle); 
 label("$B$", (-2.4152664607576133,-1.8284228602376824), NE * labelscalefactor); 

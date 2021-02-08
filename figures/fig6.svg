@@ -36,7 +36,7 @@
 <path clip-path='url(#clip1)' d='M -75.6371 92.7867L 44.1142 39.8879' fill='none' stroke='#000000' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10.0375' stroke-width='0.803'/>
 </g>
 <g transform='matrix(0.996264 0 0 0.996264 137.398 76.404)'>
-<path clip-path='url(#clip1)' d='M 44.1142 39.8879L 21.2748 92.5785' fill='none' stroke='#000000' stroke-dasharray='1.64079,1.64079' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10.0375' stroke-width='0.803'/>
+<path clip-path='url(#clip1)' d='M 44.1142 39.8879L 21.2748 92.5785' fill='none' stroke='#000000' stroke-dasharray='3.3781,3.3781' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10.0375' stroke-width='0.803'/>
 </g>
 <g transform='matrix(0.996264 0 0 0.996264 137.398 76.404)'>
 <circle clip-path='url(#clip1)' cx='-75.6371' cy='92.7867' fill='#000000' r='0.5'/>

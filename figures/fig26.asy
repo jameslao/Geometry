@@ -1,0 +1,7 @@
+import graph; size(6cm); real lsf=0.5; pen dps=linewidth(0.7)+fontsize(10); defaultpen(dps); pen ds=black; real xmin=-2.422252193798335,xmax=2.109146508261275,ymin=-1.4500895925774069,ymax=1.6994713868752176; 
+pen ttqqqq=rgb(0.2,0.,0.), eaevev=rgb(0.75,0.75,0.75); 
+pair A=(0.,1.), B=(-0.8660254037844386,-0.5), C=(0.8660254037844387,-0.5), P=(0.4548182014136288,-0.8905843046353735), D=(0.1326523289483086,0.44859196421006337); 
+filldraw(A--B--C--cycle,white,linewidth(1.2)); filldraw(D--B--A--cycle,eaevev+opacity(0.5),linewidth(0.)+ttqqqq); filldraw(B--C--P--cycle,eaevev+opacity(0.5),linewidth(0.)+ttqqqq); 
+draw(circle((0.,0.),1.),linewidth(0.8)); draw(A--B,linewidth(1.2)); draw(B--C,linewidth(1.2)); draw(C--A,linewidth(1.2)); draw(A--P,linewidth(0.8)); draw(B--P,linewidth(0.8)); draw(C--P,linewidth(0.8)); draw(P--D,linewidth(0.8)); draw(D--B,linewidth(0.8)+linetype("4 4")); 
+dot(A,linewidth(1.pt)+ds); label("$A$",(0.006989121742137261,1.0232529268760544),NE*lsf); dot(B,linewidth(1.pt)+ds); label("$B$",(-1.0073385682566076,-0.5717406146437111),NE*lsf); dot(C,linewidth(1.pt)+ds); label("$C$",(0.8779878990236681,-0.5901161162741231),NE*lsf); dot(P,linewidth(1.pt)+ds); label("$P$",(0.48107706380676796,-0.9870269514910232),NE*lsf); dot(D,linewidth(1.pt)+ds); label("$D$",(0.157668235111516,0.4131862727463745),NE*lsf); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 

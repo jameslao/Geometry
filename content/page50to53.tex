@@ -1,0 +1,676 @@
+\documentclass[12pt]{article}
+
+% Use this form to include EPS (latex) or PDF (pdflatex) files:
+%\usepackage{asymptote}
+
+% Use this form with latex or pdflatex to include inline LaTeX code by default:
+\usepackage[inline]{asymptote}
+
+\usepackage{fourier}
+% Use this form with latex or pdflatex to create PDF attachments by default:
+%\usepackage[attach]{asymptote}
+
+% Enable this line to support the attach option:
+%\usepackage[dvips]{attachfile2}
+
+\begin{document}
+
+% Optional subdirectory for latex files (no spaces):
+\def\asylatexdir{}
+% Optional subdirectory for asy files (no spaces):
+\def\asydir{}
+
+\begin{asydef}
+// Global Asymptote definitions can be put here.
+import three;
+usepackage("bm");
+texpreamble("\def\V#1{\bm{#1}}");
+// One can globally override the default toolbar settings here:
+// settings.toolbar=true;
+\end{asydef}
+
+
+
+\section*{Exercises}
+
+\begin{enumerate}
+
+\item Two circles intersect at $A$ and $B$, $AC$ and $AD$ are the diameters of two circles respectively, prove: $C, B$, and  $D$ are collinear.
+ 
+\item Two circles  intersect at $A$ and $B$, $AD$ and $BF$ are the chords of the two circles, and   intersect with the other circles at $C$ and $E$ respectively, prove: $CF//DE$.
+
+\item Two circles are tangent at $P$, one chord $AB$ of the first circle tangents the second circle at $C$. Assume the extension of $AP$ intersects the second circle at $D$, prove: $\angle BPC=\angle CPD$.
+
+\item Given a half circle $O$, $AB$ is its diameter, $C$ is a point on this half circle, $CD\bot AB$ at $D$, $\odot P$ tangents $\odot O$ externally at $E$, tangents the line $CD$ at $F$, and $A, E$ are in the
+same side of $CD$, prove: $A, E, F$ are collinear.
+
+\end{enumerate} 
+
+\section*{Exercises set 1}
+
+ \begin{enumerate}
+ \item Assume $AD$ is the median of $\triangle ABC$, $AE$ is the median of $\triangle ABD$, and $BA=BD$, prove: $AC=2AE$.
+ %probem 1 graph
+ 
+  \begin{asy}
+    /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+import graph; size(4.cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -3.99399, xmax = 7.883700224892093, ymin = -8.713929985012639, ymax = 7.253134080690438;  /* image dimensions */
+
+ /* draw figures */
+draw((0.88,0.64)--(-1.8,-1.62), linewidth(2.)); 
+draw((-1.8,-1.62)--(4.74,-1.58), linewidth(2.)); 
+draw((4.74,-1.58)--(0.88,0.64), linewidth(2.)); 
+draw((1.47,-1.6)--(0.88,0.64), linewidth(2.)); 
+draw((-0.165,-1.61)--(0.88,0.64), linewidth(2.)); 
+ /* dots and labels */
+dot((0.88,0.64),dotstyle); 
+label("$A$", (0.9584725332162531,0.8416488960065766), NE * labelscalefactor); 
+dot((-1.8,-1.62),dotstyle); 
+label("$B$", (-1.8773773820694024,-2.1585973763134354), NE * labelscalefactor); 
+dot((4.74,-1.58),dotstyle); 
+label("$C$", (4.513559745856966,-2.0147499522980925), NE * labelscalefactor); 
+dot((1.47,-1.6),linewidth(4.pt) + dotstyle); 
+label("$D$", (1.513312734033012,-2.055849216302476), NE * labelscalefactor); 
+dot((-0.165,-1.61),dotstyle); 
+label("$E$", (-0.27450569082098836,-2.1380477443112436), NE * labelscalefactor); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* re-scale y/x */
+currentpicture = yscale(1.115830390861128) * currentpicture; 
+ /* end of picture */
+ \end{asy} 
+ 
+ 
+ \item Prove the perimeter of a triangle is greater than the sum of the three medians.
+ 
+ \item Given a triangle $ABC$, assume $P$ is a point on the exterior angle bisector of $A$, prove: $PB+PC > AB+AC$.
+% problem 3 , graph
+
+ \begin{asy}
+  /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+import graph; size(6.cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -12.65228500381642, xmax = 13.786436538120924, ymin = -10.810725412964283, ymax = 10.38936399682446;  /* image dimensions */
+
+ /* draw figures */
+draw((-0.6198018252876607,5.1780164070308325)--(-5.340027652692367,0.048522444302025035), linewidth(2.)); 
+draw((-5.340027652692367,0.048522444302025035)--(2.436066918465675,0.0758069866569655), linewidth(2.)); 
+draw((2.436066918465675,0.0758069866569655)--(-1.730923879399975,3.970554290423232), linewidth(2.)); 
+draw((-1.730923879399975,3.970554290423232)--(2.46,4.13), linewidth(2.)); 
+draw((-5.340027652692367,0.048522444302025035)--(2.46,4.13), linewidth(2.)); 
+draw((2.46,4.13)--(2.436066918465675,0.0758069866569655), linewidth(2.)); 
+ /* dots and labels */
+dot((-0.6198018252876607,5.1780164070308325),dotstyle); 
+label("$D$", (-0.5106636558678973,5.450861830580236), NE * labelscalefactor); 
+dot((-5.340027652692367,0.048522444302025035),dotstyle); 
+label("$B$", (-5.831149415081295,-0.49716840279678587), NE * labelscalefactor); 
+dot((2.436066918465675,0.0758069866569655),dotstyle); 
+label("$C$", (2.245075121981093,-0.5790220298616072), NE * labelscalefactor); 
+dot((-1.730923879399975,3.970554290423232),dotstyle); 
+label("$A$", (-2.2841589089390295,4.304911051672736), NE * labelscalefactor); 
+dot((2.46,4.13),dotstyle); 
+label("$P$", (2.572489630240379,4.414049221092498), NE * labelscalefactor); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* re-scale y/x */
+currentpicture = yscale(0.9976833976833988) * currentpicture; 
+ /* end of picture */
+ \end{asy}
+ 
+ \item For a right triangle $ABC$, assume $AB$ is the hypotenuse, the perpendicular bisector $ME$ of $AB$ intersects the angle bisector of $C$ at $E$. Prove: $MC=ME$.
+ %problem 4 graph
+ 
+ \begin{asy}
+  /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+import graph; size(6.cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -4.087272727272728, xmax = 11.185454545454553, ymin = -4.909090909090907, ymax = 5.727272727272728;  /* image dimensions */
+
+ /* draw figures */
+draw((-2.,0.)--(2.,0.), linewidth(2.)); 
+draw((-2.,0.)--(1.,2.), linewidth(2.)); 
+draw((2.,0.)--(1.,2.), linewidth(2.)); 
+draw((-0.014545454545453751,0.)--(1.,2.), linewidth(2.)); 
+draw((-0.014545454545453751,0.)--(0.,-2.2545454545454535), linewidth(2.)); 
+draw((0.,-2.2545454545454535)--(1.,2.), linewidth(2.)); /* special point *//* special point */
+draw((-0.32363636363636283,0.)--(-0.32363636363636294,-0.3818181818181808), linewidth(2.)); /* special point */
+draw((-0.32363636363636294,-0.3818181818181808)--(-0.014545454545453723,-0.3818181818181808), linewidth(2.)); 
+ /* dots and labels */
+dot((-2.,0.),dotstyle); 
+label("$A$", (-1.9236363636363634,0.18181818181818285), NE * labelscalefactor); 
+dot((2.,0.),dotstyle); 
+label("$B$", (2.076363636363639,0.18181818181818285), NE * labelscalefactor); 
+dot((1.,2.),dotstyle); 
+label("$C$", (1.0763636363636382,2.1818181818181825), NE * labelscalefactor); 
+dot((-0.014545454545453751,0.),dotstyle); 
+dot((0.,-2.2545454545454535),dotstyle); 
+label("$E$", (0.1854545454545469,-2.4545454545454533), NE * labelscalefactor); dot((-0.32363636363636283,0.),linewidth(0.25pt) + dotstyle + invisible,UnFill(0)); 
+label("$M$", (-0.36,0.2181818181818192), NE * labelscalefactor); dot((-0.32363636363636294,-0.3818181818181808),linewidth(0.25pt) + dotstyle + invisible,UnFill(0)); 
+dot((0.,-2.2545454545454535),linewidth(4.pt) + dotstyle); dot((-0.014545454545453723,-0.3818181818181808),linewidth(0.25pt) + dotstyle + invisible,UnFill(0)); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* re-scale y/x */
+currentpicture = yscale(0.9572649572649576) * currentpicture; 
+ /* end of picture */
+ \end{asy}
+ \item For an isosceles triangle $ABC$ with $AB=AC$, $CX$ is the altitude on $AB$, $XP\bot BC$ at $P$. Prove: $AB^2=PA^2+PX^2$.
+ %problem 5, graph
+ 
+ \begin{asy}
+  /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+import graph; size(5.cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -10.459170754027738, xmax = 7.153082629837955, ymin = -5.823824758416754, ymax = 6.441851705346794;  /* image dimensions */
+
+ /* draw figures */
+draw((0.,4.)--(-2.,0.), linewidth(2.)); 
+draw((-2.,0.)--(2.,0.), linewidth(2.)); 
+draw((2.,0.)--(-1.204,1.592), linewidth(2.)); 
+draw((-1.204,1.592)--(-1.22,0.), linewidth(2.)); 
+draw((-1.22,0.)--(0.,4.), linewidth(2.)); 
+draw((0.,4.)--(2.,0.), linewidth(2.)); 
+draw((-1.218266460838991,0.17248714652038855)--(-1.408639756356043,0.1726249717788362), linewidth(2.)); 
+draw((-1.408639756356043,0.1726249717788362)--(-1.408639756356043,0.), linewidth(2.)); 
+draw((-1.1276942911841714,1.7446114176316572)--(-0.9983333974622304,1.671382921627066), linewidth(2.)); 
+draw((-0.9983333974622304,1.671382921627066)--(-1.07787344269296,1.5293303747712836), linewidth(2.)); 
+ /* dots and labels */
+dot((0.,4.),dotstyle); 
+label("$A$", (-0.12245537516370693,4.261287000677719), NE * labelscalefactor); 
+dot((-2.,0.),dotstyle); 
+label("$B$", (-2.407854921403422,-0.37241299674406597), NE * labelscalefactor); 
+dot((2.,0.),dotstyle); 
+label("$C$", (2.2258450760183854,-0.26757815517343736), NE * labelscalefactor); 
+dot((-1.204,1.592),linewidth(2.pt) + dotstyle); 
+label("$X$", (-1.5691761888383888,1.6823498980402547), NE * labelscalefactor); 
+dot((-1.22,0.),linewidth(2.pt) + dotstyle); 
+label("$P$", (-1.296605600754753,-0.5611157115711974), NE * labelscalefactor); 
+dot((-1.218266460838991,0.17248714652038855),linewidth(1.pt) + dotstyle); 
+dot((-1.408639756356043,0.1726249717788362),linewidth(1.pt) + dotstyle); 
+dot((-1.408639756356043,0.),linewidth(2.pt) + dotstyle); 
+dot((-1.1276942911841714,1.7446114176316572),linewidth(1.pt) + dotstyle); 
+dot((-0.9983333974622304,1.671382921627066),linewidth(1.pt) + dotstyle); 
+dot((-1.07787344269296,1.5293303747712836),linewidth(1.pt) + dotstyle); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* re-scale y/x */
+currentpicture = yscale(0.9936410256410305) * currentpicture; 
+ /* end of picture */
+ \end{asy}
+ 
+ \item Prove the length of the diagonal of a rectangle is longer than any line segment between the two opposite sides.
+ 
+ \item For the square $ABCD$, assume $E$ is the midpoint of $CD$, $BF\bot AE$ at $F$, prove: $CF=CB$.
+ %problem 7, graph is here
+ 
+ \begin{asy}
+  /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+import graph; size(5.cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -7.086270484572427, xmax = 17.616372676863413, ymin = -8.648587670983188, ymax = 8.555038816445293;  /* image dimensions */
+
+ /* draw figures */
+draw((0.,0.)--(4.,0.), linewidth(2.)); 
+draw((4.,0.)--(4.,4.), linewidth(2.)); 
+draw((4.,4.)--(0.,4.), linewidth(2.)); 
+draw((0.,4.)--(0.,0.), linewidth(2.)); 
+draw((0.,0.)--(2.,4.), linewidth(2.)); 
+draw((4.,0.)--(0.796,1.592), linewidth(2.)); 
+draw((0.796,1.592)--(4.,4.), linewidth(2.)); 
+draw((0.6695301316495708,1.3390602632991415)--(0.9053047501922775,1.2285488382042102), linewidth(2.)); 
+draw((0.9053047501922775,1.2285488382042102)--(1.032099380779174,1.4746871990635317), linewidth(2.)); 
+ /* dots and labels */
+dot((0.,0.),linewidth(4.pt) + dotstyle); 
+label("$A$", (-0.44008315780516594,-0.5025970094144881), NE * labelscalefactor); 
+dot((4.,0.),dotstyle); 
+label("$B$", (4.118142663650257,-0.5320049179400068), NE * labelscalefactor); 
+dot((4.,4.),dotstyle); 
+label("$C$", (3.971103121022663,4.290892080245071), NE * labelscalefactor); 
+dot((0.,4.),dotstyle); 
+label("$D$", (-0.14600407254997738,4.261484171719553), NE * labelscalefactor); 
+dot((2.,4.),dotstyle); 
+label("$E$", (1.9419574327618614,4.290892080245071), NE * labelscalefactor); 
+dot((0.796,1.592),linewidth(2.pt) + dotstyle); 
+label("$F$", (0.2657066468072866,1.4677328617952696), NE * labelscalefactor); 
+dot((0.6695301316495708,1.3390602632991415),linewidth(1.pt) + dotstyle); 
+dot((0.9053047501922775,1.2285488382042102),linewidth(1.pt) + dotstyle); 
+dot((1.032099380779174,1.4746871990635317),linewidth(1.pt) + dotstyle); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* re-scale y/x */
+currentpicture = yscale(0.9993846153846184) * currentpicture; 
+ /* end of picture */
+   \end{asy}
+ \item For an isosceles triangle $ABC, AB=AC$, the circle which takes $AB$ as a diameter intersects $AC$ and $BC$ at $E$ and $D$ respectively. Make $DF\bot AC$ at $F$, prove: $DF^2=EF\cdot FA$.
+ 
+ %graphi is here, problem 8
+ \vskip 0.1 cm
+  
+ \begin{asy}
+   /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+import graph; size(6.cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -7.161088576511734, xmax = 7.506200177138656, ymin = -6.010978712260052, ymax = 4.203740241174984;  /* image dimensions */
+
+ /* draw figures */
+draw(shift((0.,0.)) * scale(2., 2.)*unitcircle, linewidth(2.)); 
+draw((-1.005240914749061,-1.7290143733683856)--(1.0405166453203276,1.7080178894880849), linewidth(2.)); 
+draw((-1.005240914749061,-1.7290143733683856)--(2.02,-1.73), linewidth(2.)); 
+draw((2.02,-1.73)--(1.0405166453203276,1.7080178894880849), linewidth(2.)); 
+draw((1.004114072106722,-1.729669023309736)--(1.94,-1.46), linewidth(2.)); 
+draw((1.8370651183943327,-1.4896599704726716)--(1.815010728447971,-1.4022474793388868), linewidth(2.)); 
+draw((1.815010728447971,-1.4022474793388868)--(1.918898053107361,-1.375128934128092), linewidth(2.)); 
+draw((1.815010728447971,-1.4022474793388868)--(1.918898053107361,-1.375128934128092), linewidth(2.)); 
+ /* dots and labels */
+dot((-1.005240914749061,-1.7290143733683856),dotstyle); 
+label("$B$", (-1.3989394232919385,-2.047318537166457), NE * labelscalefactor); 
+dot((1.0405166453203276,1.7080178894880849),dotstyle); 
+label("$A$", (1.1503750505568198,1.9338026959671981), NE * labelscalefactor); 
+dot((2.02,-1.73),dotstyle); 
+label("$C$", (2.180577474920359,-2.029857479126397), NE * labelscalefactor); 
+dot((1.004114072106722,-1.729669023309736),linewidth(4.pt) + dotstyle); 
+label("$D$", (0.9757644701562198,-2.1346238273667564), NE * labelscalefactor); 
+dot((1.94,-1.46),linewidth(2.pt) + dotstyle); 
+label("$F$", (2.005966894519759,-1.383798331644181), NE * labelscalefactor); 
+dot((1.0405166453203276,1.7080178894880849),linewidth(4.pt) + dotstyle); 
+dot((1.7844445845462864,-0.9031929609354977),linewidth(4.pt) + dotstyle); 
+label("$E$", (1.3948298631176594,-0.912349764562564), NE * labelscalefactor); 
+dot((1.8370651183943327,-1.4896599704726716),linewidth(1.pt) + dotstyle); 
+dot((1.815010728447971,-1.4022474793388868),linewidth(1.pt) + dotstyle); 
+dot((1.918898053107361,-1.375128934128092),linewidth(1.pt) + dotstyle); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* re-scale y/x */
+currentpicture = yscale(0.9979487179487236) * currentpicture; 
+ /* end of picture */
+ \end{asy}
+ \item Prove: For a triangle, the symmetric points of the orthocenter along the sides are on the circumcircle.
+ 
+ \item In the following figure, $AB$ is a diameter of $\odot O$, $AT$ is a tangent line of $\odot O$, $P$ is on the extension of $BM$ such that $PT\bot AT, PT=PM$. Prove: $PB=AB$.
+ 
+ %graph here problem 10
+ 
+ \begin{asy}
+  /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+import graph; size(4.cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -4.4731042961546335, xmax = 2.5557250808749985, ymin = -2.966792382537209, ymax = 4.297987097254902;  /* image dimensions */
+
+ /* draw figures */
+draw(shift((0.,0.)) * scale(2., 2.)*unitcircle, linewidth(2.)); 
+draw((-2.,0.)--(2.,0.), linewidth(2.)); 
+draw((-2.,0.)--(-1.9894190039180142,2.5966626720728176), linewidth(2.)); 
+draw((-1.9894190039180142,2.5966626720728176)--(-1.033200166406916,2.5842442456116346), linewidth(2.)); 
+draw((-1.033200166406916,2.5842442456116346)--(2.,0.), linewidth(2.)); 
+draw((-1.9906336656513137,2.2985747834076107)--(-1.6168662100825215,2.2862020105432403), linewidth(2.)); 
+draw((-1.6168662100825215,2.2862020105432403)--(-1.60445,2.5892), linewidth(2.)); 
+ /* dots and labels */
+dot((-2.,0.),linewidth(4.pt) + dotstyle); 
+label("$A$", (-1.952163724534465,0.10055895337501551), NE * labelscalefactor); 
+dot((2.,0.),linewidth(4.pt) + dotstyle); 
+label("$B$", (2.0465695959664916,0.10055895337501551), NE * labelscalefactor); 
+dot((-1.9894190039180142,2.5966626720728176),dotstyle); 
+label("$T$", (-1.9397452980732819,2.7208469366846484), NE * labelscalefactor); 
+dot((-1.033200166406916,2.5842442456116346),dotstyle); 
+label("$P$", (-0.9835264605621836,2.7084285102234653), NE * labelscalefactor); 
+dot((-1.9906336656513137,2.2985747834076107),linewidth(1.pt) + dotstyle); 
+dot((-1.6168662100825215,2.2862020105432403),linewidth(1.pt) + dotstyle); 
+dot((-1.60445,2.5892),linewidth(1.pt) + dotstyle); 
+dot((0.,0.),dotstyle); 
+label("$O$", (0.04720293571601328,0.1253958062973817), NE * labelscalefactor); 
+dot((-0.31765791725960196,1.9746122271479765),linewidth(4.pt) + dotstyle); 
+label("$M$", (-0.2632577258135641,2.0750887607031276), NE * labelscalefactor); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* re-scale y/x */
+currentpicture = yscale(0.9917094017094018) * currentpicture; 
+ /* end of picture */
+ \end{asy}
+ \item In the following figure, $AB$ is a diameter of $\odot O$, $P$ is a point on the circle, $Q$ is the midpoint of the arc $\widearc{BP}$, the tangent line $QH$ intersects $AP$ at $H$, prove: $QH\bot AP$.
+ %problem 11 graph
+ 
+ \begin{asy}
+  /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+import graph; size(5.2cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -4.4731042961546335, xmax = 5.958373931239167, ymin = -2.966792382537209, ymax = 4.297987097254902;  /* image dimensions */
+
+ /* draw figures */
+draw(shift((0.,0.)) * scale(2., 2.)*unitcircle, linewidth(2.)); 
+draw((-2.,0.)--(2.,0.), linewidth(2.)); 
+draw((-2.,0.)--(0.9537480673823792,2.3110388634656065), linewidth(2.)); 
+draw((1.58,1.23)--(0.9537480673823792,2.3110388634656065), linewidth(2.)); 
+ /* dots and labels */
+dot((-2.,0.),linewidth(4.pt) + dotstyle); 
+label("$A$", (-2.349553371292324,-0.09813587000391401), NE * labelscalefactor); 
+dot((2.,0.),linewidth(4.pt) + dotstyle); 
+label("$B$", (2.1583354341171392,-0.18506485523219568), NE * labelscalefactor); 
+dot((0.,0.),dotstyle); 
+label("$O$", (0.04720293571601328,0.1253958062973817), NE * labelscalefactor); 
+dot((0.9537480673823792,2.3110388634656065),dotstyle); 
+label("$H$", (1.0034217732271116,2.4352231280774372), NE * labelscalefactor); 
+dot((1.58,1.23),dotstyle); 
+label("$Q$", (1.6243430962862664,1.354820025954508), NE * labelscalefactor); 
+dot((0.4811375657135137,1.9412641867760487),linewidth(4.pt) + dotstyle); 
+label("$P$", (0.35766359724559066,2.0626703342419446), NE * labelscalefactor); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* re-scale y/x */
+currentpicture = yscale(0.9664694280078895) * currentpicture; 
+ /* end of picture */
+ \end{asy}
+ 
+\item In the following figure, two circles  tangent internally at $P$, a secant intersects the two circles at $A, B, C, D$, prove: $\angle APB=\angle CPD$.
+%problem 12, graph
+
+\begin{asy}
+ /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+import graph; size(6.cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -4.4731042961546335, xmax = 5.958373931239167, ymin = -2.966792382537209, ymax = 4.297987097254902;  /* image dimensions */
+
+ /* draw figures */
+draw(shift((0.,0.)) * scale(2., 2.)*unitcircle, linewidth(2.)); 
+draw(shift((-0.7599947842608878,-0.358922825688759)) * scale(1.144113882562022, 1.144113882562022)*unitcircle, linewidth(2.)); 
+draw((-1.9670045595430818,0.361791463051198)--(1.974168812869036,0.3204020884689435), linewidth(2.)); 
+draw((-1.795492987832248,-0.8454822225475906)--(-1.9670045595430818,0.361791463051198), linewidth(2.)); 
+draw((-1.795492987832248,-0.8454822225475906)--(-1.6512502196468668,0.3584754773243538), linewidth(2.)); 
+draw((-1.795492987832248,-0.8454822225475906)--(0.14613035480935482,0.3395997642223174), linewidth(2.)); 
+draw((-1.795492987832248,-0.8454822225475906)--(1.974168812869036,0.3204020884689435), linewidth(2.)); 
+ /* dots and labels */
+dot((-0.7599947842608878,-0.358922825688759),dotstyle); 
+dot((-1.9670045595430818,0.361791463051198),dotstyle); 
+label("$A$", (-2.250205959602859,0.26199849737039577), NE * labelscalefactor); 
+dot((1.974168812869036,0.3204020884689435),dotstyle); 
+label("$D$", (2.0217327430441254,0.44827489428814216), NE * labelscalefactor); 
+dot((-1.795492987832248,-0.8454822225475906),dotstyle); 
+label("$P$", (-2.0515111362239296,-1.1785389721268433), NE * labelscalefactor); 
+dot((-1.6512502196468668,0.3584754773243538),linewidth(4.pt) + dotstyle); 
+label("$B$", (-1.5423556513154228,0.1378142327585648), NE * labelscalefactor); 
+dot((0.14613035480935482,0.3395997642223174),linewidth(4.pt) + dotstyle); 
+label("$C$", (0.19622405325021042,0.4358564678269591), NE * labelscalefactor); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* re-scale y/x */
+currentpicture = yscale(1.0290598290598292) * currentpicture; 
+ /* end of picture */
+\end{asy}
+\item In the following figure, two circles  tangent externally at $P$, a secant intersects the two circles at $A, B, C, D$, prove: $\angle APD+\angle BPC=180^\circ$.
+%problem 13 , graph
+
+\begin{asy}
+ /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+import graph; size(5.1cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -4.4731042961546335, xmax = 2.891022595326942, ymin = -2.966792382537209, ymax = 4.297987097254902;  /* image dimensions */
+
+ /* draw figures */
+draw(shift((0.,0.)) * scale(1.4142135623730951, 1.4142135623730951)*unitcircle, linewidth(2.)); 
+draw(shift((-2.3619717977535073,0.)) * scale(0.9219393033124031, 0.9219393033124031)*unitcircle, linewidth(2.)); 
+draw((-3.136118898030146,0.5006679000349743)--(1.,1.), linewidth(2.)); 
+draw((-1.4404026430075607,0.026122251300388356)--(-3.136118898030146,0.5006679000349743), linewidth(2.)); 
+draw((-1.4404026430075607,0.026122251300388356)--(1.,1.), linewidth(2.)); 
+draw((-1.4404026430075607,0.026122251300388356)--(-1.7471093919730598,0.6869616444533417), linewidth(2.)); 
+draw((-1.4404026430075607,0.026122251300388356)--(-1.209250913144812,0.7332886396627447), linewidth(2.)); 
+ /* dots and labels */
+dot((-3.136118898030146,0.5006679000349743),dotstyle); 
+label("$A$", (-3.3430274881869715,0.7214802764341702), NE * labelscalefactor); 
+dot((1.,1.),dotstyle); 
+label("$D$", (1.0530954790718439,1.1188699231920294), NE * labelscalefactor); 
+dot((-1.4404026430075607,0.026122251300388356),dotstyle); 
+label("$P$", (-1.318823975014127,-0.22232013461574496), NE * labelscalefactor); 
+dot((-1.7471093919730598,0.6869616444533417),dotstyle); 
+label("$B$", (-1.69137676884962,0.808409261662452), NE * labelscalefactor); 
+dot((-1.209250913144812,0.7332886396627447),linewidth(4.pt) + dotstyle); 
+label("$C$", (-1.306405548552944,0.8580829675071843), NE * labelscalefactor); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* re-scale y/x */
+currentpicture = yscale(0.993799229093347) * currentpicture; 
+ /* end of picture */
+\end{asy}
+\item Two circles intersect at $A,B$, the line passes $A$ intersect the two circles at $C$ and $D$, the tangent lines at $C$ and $D$ intersect at $P$. Prove: $B, C, P, D$ are cyclic.
+%problem 14, graph
+
+\begin{asy}
+ /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+import graph; size(6.cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -4.435849016771084, xmax = 2.928277874710491, ymin = -2.966792382537209, ymax = 4.297987097254902;  /* image dimensions */
+
+ /* draw figures */
+draw(shift((0.,0.)) * scale(1.4142135623730951, 1.4142135623730951)*unitcircle, linewidth(2.)); 
+draw(shift((-2.,0.)) * scale(1., 1.)*unitcircle, linewidth(2.)); 
+draw((-2.8551526319614684,0.5183762880855693)--(1.118100142291255,0.8659399931913733), linewidth(2.)); 
+draw((-2.8551526319614684,0.5183762880855693)--(-0.99,3.59), linewidth(2.)); 
+draw((-0.99,3.59)--(1.118100142291255,0.8659399931913733), linewidth(2.)); 
+ /* dots and labels */
+dot((-2.8551526319614684,0.5183762880855693),dotstyle); 
+label("$C$", (-3.119495811885676,0.6221328647447055), NE * labelscalefactor); 
+dot((1.118100142291255,0.8659399931913733),dotstyle); 
+label("$D$", (1.1648613172224918,0.9946856585801983), NE * labelscalefactor); 
+dot((-0.99,3.59),dotstyle); 
+label("$P$", (-0.9462711811786343,3.714321053579296), NE * labelscalefactor); 
+dot((-1.25,0.6614378277661476),linewidth(4.pt) + dotstyle); 
+label("$A$", (-1.3809161073200427,0.8705013939683673), NE * labelscalefactor); 
+dot((-1.25,-0.6614378277661477),linewidth(4.pt) + dotstyle); 
+label("$B$", (-1.1201291516351977,-0.7687308989078011), NE * labelscalefactor); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* re-scale y/x */
+currentpicture = yscale(0.9967806267806267) * currentpicture; 
+ /* end of picture */
+\end{asy}
+
+\item In $\triangle ABC, \angle C=90^\circ, CD $ is the altitude, the circle which takes $CD$ as a diameter intersects $AC$ and $BC$ at $E$ and $F$ respectively, prove: $\frac{BF}{AE}=\frac{BC^3}{AC^3}$.
+%problem 15, graph
+
+\begin{asy}
+ /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+import graph; size(5.cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -4.130939391861602, xmax = 3.8532617283232016, ymin = -3.0834787718327283, ymax = 2.4769470082959777;  /* image dimensions */
+
+ /* draw figures */
+draw(shift((0.,0.)) * scale(1.4142135623730951, 1.4142135623730951)*unitcircle, linewidth(2.)); 
+draw((-1.9261504273828192,-1.4158272292071439)--(1.7353622781182274,-1.4223192730112237), linewidth(2.)); 
+draw((0.0019678313319003806,1.4142121932863716)--(-0.011003525836233985,-1.419222879741801), linewidth(2.)); 
+draw((-1.9261504273828192,-1.4158272292071439)--(0.0019678313319003806,1.4142121932863716), linewidth(2.)); 
+draw((1.7353622781182274,-1.4223192730112237)--(0.0019678313319003806,1.4142121932863716), linewidth(2.)); 
+draw((-0.01033387525960313,-1.2729458629342914)--(0.16428767753089896,-1.2794943093214666), linewidth(2.)); 
+draw((0.16428767753089896,-1.2794943093214666)--(0.16426959515096318,-1.4195336476868137), linewidth(2.)); 
+draw((-0.01033387525960313,-1.2729458629342914)--(0.16428767753089896,-1.2794943093214666), linewidth(2.)); 
+ /* dots and labels */
+dot((-1.9261504273828192,-1.4158272292071439),dotstyle); 
+label("$A$", (-2.011324094479208,-1.7337685824681535), NE * labelscalefactor); 
+dot((1.7353622781182274,-1.4223192730112237),dotstyle); 
+label("$B$", (1.6100814136046138,-1.61020356513196), NE * labelscalefactor); 
+dot((0.0019678313319003806,1.4142121932863716),dotstyle); 
+label("$C$", (0.05126119490186627,1.5074368722735367), NE * labelscalefactor); 
+dot((-0.011003525836233985,-1.419222879741801),dotstyle); 
+label("$D$", (-0.09131382510143381,-1.6767385744668335), NE * labelscalefactor); 
+dot((-1.3153910202197132,-0.5193712197699658),linewidth(4.pt) + dotstyle); 
+label("$E$", (-1.1463689731258544,-0.6026734237753055), NE * labelscalefactor); 
+dot((1.2593739459080813,-0.6434106498713779),linewidth(4.pt) + dotstyle); 
+label("$F$", (1.391466382932887,-0.6216834264424123), NE * labelscalefactor); 
+dot((-0.01033387525960313,-1.2729458629342914),linewidth(1.pt) + dotstyle); 
+dot((0.16428767753089896,-1.2794943093214666),linewidth(1.pt) + dotstyle); 
+dot((0.16426959515096318,-1.4195336476868137),linewidth(1.pt) + dotstyle); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* re-scale y/x */
+currentpicture = yscale(1.0051282051282044) * currentpicture; 
+ /* end of picture */
+ \end{asy}
+\item In the following $\triangle ABC, \angle B=3\angle C, AD $ is the angle bisector of $\angle A$, $BD\bot AD$. Prove: $BD=\frac12(AC-AB)$.
+
+%problem 16, graph
+
+\begin{asy}
+ /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+import graph; size(6.cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -1.4556955905720552, xmax = 3.7597272456823423, ymin = -2.2937230767348784, ymax = 0.8614189700167468;  /* image dimensions */
+pen qqwuqq = rgb(0.,0.39215686274509803,0.); 
+
+draw((0.,-0.3855885981094934)--(-0.11441140189050655,-0.3855885981094934)--(-0.11441140189050655,-0.5)--(0.,-0.5)--cycle, linewidth(2.) + qqwuqq); 
+ /* draw figures */
+draw((-1.,-0.5)--(0.,0.6940870071188128), linewidth(2.)); 
+draw((0.,0.6940870071188128)--(1.,-0.5), linewidth(2.)); 
+draw((2.29,-2.02)--(1.,-0.5), linewidth(2.)); 
+draw((2.29,-2.02)--(-1.,-0.5), linewidth(2.)); 
+draw((-1.,-0.5)--(0.,-0.5), linewidth(2.)); 
+draw((0.,-0.5)--(0.,0.6940870071188128), linewidth(2.)); 
+ /* dots and labels */
+dot((-1.,-0.5),dotstyle); 
+label("$B$", (-1.094337441627852,-0.7458157820037392), NE * labelscalefactor); 
+dot((0.,0.6940870071188128),dotstyle); 
+label("$A$", (0.05445786770222743,0.6942234085649512), NE * labelscalefactor); 
+dot((2.29,-2.02),dotstyle); 
+label("$C$", (2.3089012446974064,-1.9647253590394098), NE * labelscalefactor); 
+dot((0.,-0.5),dotstyle); 
+label("$D$", (0.08142489374283962,-0.5192927632625969), NE * labelscalefactor); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* re-scale y/x */
+currentpicture = yscale(0.9642450142450146) * currentpicture; 
+ /* end of picture */
+\end{asy}
+\item In right triangle $ABC, \angle A=90^\circ, AD $ is the altitude on $BC, BF$ is the angle bisector of $\angle B$, $AD$ and $BF$ intersect at $E$, $EG//BC$. Prove: $CG=AF$.
+%problem 17
+
+\begin{asy}
+ /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+import graph; size(6.8cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -2.0085778964173815, xmax = 1.4383431546019838, ymin = -1.284224087603806, ymax = 1.7480297693079643;  /* image dimensions */
+pen qqwuqq = rgb(0.,0.39215686274509803,0.); 
+
+draw((0.10995524433340398,0.)--(0.10995524433340399,0.10995524433340398)--(0.,0.10995524433340398)--(0.,0.)--cycle, linewidth(2.) + qqwuqq); 
+ /* draw figures */
+draw((0.,1.103313434547969)--(-1.7110913323403383,0.), linewidth(2.)); 
+draw((-1.7110913323403383,0.)--(0.71,0.), linewidth(2.)); 
+draw((0.,1.103313434547969)--(0.,0.), linewidth(2.)); 
+draw((0.,1.103313434547969)--(0.71,0.), linewidth(2.)); 
+draw((-1.7110913323403383,0.)--(0.328152103509231,0.5933773438762644), linewidth(2.)); 
+draw((0.,0.5)--(0.38662981405451946,0.5025051696984838), linewidth(2.)); 
+ /* dots and labels */
+dot((0.,1.103313434547969),dotstyle); 
+label("$A$", (-0.04409206433266045,1.16231235763099), NE * labelscalefactor); 
+dot((-1.7110913323403383,0.),dotstyle); 
+label("$B$", (-1.7753275997318603,-0.14388930380792658), NE * labelscalefactor); 
+dot((0.71,0.),dotstyle); 
+label("$C$", (0.7645089641771455,-0.04022250528102844), NE * labelscalefactor); 
+dot((0.,0.),dotstyle); 
+label("$D$", (-0.03372538447997063,-0.11278926424985714), NE * labelscalefactor); 
+dot((0.,0.5),linewidth(4.pt) + dotstyle); 
+label("$E$", (0.02329135470982338,0.5403115664696011), NE * labelscalefactor); 
+dot((0.328152103509231,0.5933773438762644),dotstyle); 
+label("$F$", (0.3498417700695527,0.6439783649964992), NE * labelscalefactor); 
+dot((0.38662981405451946,0.5025051696984838),dotstyle); 
+label("$G$", (0.40685850925934675,0.5558615862486358), NE * labelscalefactor); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* re-scale y/x */
+currentpicture = yscale(1.0030165912518862) * currentpicture; 
+ /* end of picture */
+\end{asy}
+\item In the following figure, $D$ and $E$ are the midpoints of $AB$ and $AC$ respectively,  $AB>AC$. $F$ is a point between $B$ and $D$ such that $BF=AE$.  $AH$ is the angle bisector of 
+$\angle BAC$, $FH\bot AH$, and $FH$ intersects $BC$ at $M$. Prove: $BM=MC$.
+%problem 18, graph
+
+\begin{asy}
+ /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+import graph; size(6.cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -4.477677658842574, xmax = 0.2213479843923375, ymin = -2.2000230178843236, ymax = 1.4409438712447036;  /* image dimensions */
+
+ /* draw figures */
+draw((-1.,0.5)--(-3.556526183665778,-0.46167474859710544), linewidth(2.)); 
+draw((-3.556526183665778,-0.46167474859710544)--(-0.30058754755411127,-0.4983333864943361), linewidth(2.)); 
+draw((-0.30058754755411127,-0.4983333864943361)--(-1.,0.5), linewidth(2.)); 
+draw((-1.,0.5)--(-1.39,-0.75), linewidth(2.)); 
+draw((-2.99,-0.25)--(-1.39,-0.75), linewidth(2.)); 
+draw((-1.4518662326208744,-0.7306668023059767)--(-1.4250210901899658,-0.6753361919983835), linewidth(2.)); 
+draw((-1.4250210901899658,-0.6753361919983835)--(-1.3724793032013831,-0.6938439205172537), linewidth(2.)); 
+ /* dots and labels */
+dot((-1.,0.5),dotstyle); 
+label("$A$", (-0.9736360202448849,0.5633774928392458), NE * labelscalefactor); 
+dot((-3.556526183665778,-0.46167474859710544),dotstyle); 
+label("$B$", (-3.8117230312582886,-0.6751736369670387), NE * labelscalefactor); 
+dot((-0.30058754755411127,-0.4983333864943361),dotstyle); 
+label("$C$", (-0.2641142674915341,-0.6440542618462778), NE * labelscalefactor); 
+dot((-2.2782630918328888,0.019162625701447278),linewidth(4.pt) + dotstyle); 
+label("$D$", (-2.305545275413456,0.07791524095537547), NE * labelscalefactor); 
+dot((-0.6502937737770557,8.333067528319416e-4),linewidth(4.pt) + dotstyle); 
+label("$E$", (-0.6250990188923617,0.053019740858766734), NE * labelscalefactor); 
+dot((-2.99,-0.25),linewidth(4.pt) + dotstyle); 
+label("$F$", (-2.99639540309435,-0.1959352601073206), NE * labelscalefactor); 
+dot((-1.39,-0.75),linewidth(2.pt) + dotstyle); 
+label("$H$", (-1.3657401467664736,-0.8120988874983868), NE * labelscalefactor); 
+dot((-1.4518662326208744,-0.7306668023059767),linewidth(1.pt) + dotstyle); 
+dot((-1.4250210901899658,-0.6753361919983835),linewidth(1.pt) + dotstyle); 
+dot((-1.3724793032013831,-0.6938439205172537),linewidth(1.pt) + dotstyle); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* re-scale y/x */
+currentpicture = yscale(1.010968660968664) * currentpicture; 
+ /* end of picture */
+\end{asy}
+\item In trapezoid $ABCD, AD//BC, AD+BC=AB, F$ is the midpoint of $CD$. Prove: The angle bisectors of $\angle A$ and $\angle B$ intersect at $F$.
+%problem 19, graph
+
+\begin{asy}
+ /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+import graph; size(4.916993954187907cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -3.29956, xmax = 1.6174339541879075, ymin = -2.0802067899929093, ymax = 1.7756096310348624;  /* image dimensions */
+
+ /* draw figures */
+draw((-1.,0.5)--(-1.5001774939768113,-0.8015257888315626), linewidth(2.)); 
+draw((-1.5001774939768113,-0.8015257888315626)--(-0.55,-0.16), linewidth(2.)); 
+draw((-0.55,-0.16)--(-1.,0.5), linewidth(2.)); 
+draw((-0.62,0.5)--(-1.,0.5), linewidth(2.)); 
+draw((-1.5001774939768113,-0.8015257888315626)--(-0.46,-0.8), linewidth(2.)); 
+draw((-0.46,-0.8)--(-0.62,0.5), linewidth(2.)); 
+ /* dots and labels */
+dot((-1.,0.5),dotstyle); 
+label("$A$", (-1.1178911007557677,0.5628400216859564), NE * labelscalefactor); 
+dot((-1.5001774939768113,-0.8015257888315626),dotstyle); 
+label("$B$", (-1.5660889410838879,-0.9663042683626641), NE * labelscalefactor); 
+dot((-0.62,0.5),dotstyle); 
+label("$D$", (-0.5905995238991556,0.5628400216859564), NE * labelscalefactor); 
+dot((-0.55,-0.16),dotstyle); 
+label("$F$", (-0.4917323532385408,-0.18854984497586574), NE * labelscalefactor); 
+dot((-0.46,-0.8),dotstyle); 
+label("$C$", (-0.4785500638171255,-0.9333485724564439), NE * labelscalefactor); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* end of picture */
+\end{asy}
+
+\item In $\triangle ABC, AC=BC, \angle B=2\angle C$. Prove: $AC^2=AB^2+AC\cdot AB$.
+
+ \end{enumerate}
+
+ 
+
+
+\end{document}

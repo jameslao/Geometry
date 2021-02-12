@@ -170,83 +170,75 @@ import graph; size(6.cm);
 real labelscalefactor = 0.5; /* changes label-to-point distance */
 pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
 pen dotstyle = black; /* point style */ 
-real xmin = -4.781485122045432, xmax = 4.715976662930288, ymin = -2.2036406131540254, ymax = 4.410663129954066;  /* image dimensions */
+real xmin = -3.6728739438707847, xmax = 3.8390868078546636, ymin = -1.0029185521767334, ymax = 3.5826960432540624;  /* image dimensions */
+pen qqwuqq = rgb(0.,0.39215686274509803,0.); 
 
+draw((-0.6793649258151686,1.7273114497069317)--(-0.609310950991452,1.834432643766279)--(-0.7164321450507992,1.9044866185899956)--(-0.7864861198745158,1.7973654245306483)--cycle, linewidth(2.) + qqwuqq); 
+draw((-0.7864861198745158,0.12799417801330745)--(-0.9144802978878233,0.12799417801330748)--(-0.9144802978878233,0.)--(-0.7864861198745158,0.)--cycle, linewidth(2.) + qqwuqq); 
  /* draw figures */
-draw((0.,4.)--(-2.,0.), linewidth(2.)); 
-draw((-2.,0.)--(2.,0.), linewidth(2.)); 
-draw((0.,4.)--(2.,0.), linewidth(2.)); 
-draw((2.,0.)--(-1.2,1.6), linewidth(2.)); 
-draw((-1.1587380349051477,1.6825239301897046)--(-1.072492062008145,1.637421945759577), linewidth(2.)); 
-draw((-1.1177120230662512,1.5588560115331256)--(-1.072492062008145,1.637421945759577), linewidth(2.)); 
-draw((-1.2,1.6)--(-1.2,0.), linewidth(2.)); 
-draw((-1.2,0.16606273511580258)--(-1.0324697551333837,0.16331012749915502), linewidth(2.)); 
-draw((-1.0297171475167362,0.)--(-1.0324697551333837,0.16331012749915502), linewidth(2.)); 
+draw((-1.9619079708420344,0.)--(0.,3.), linewidth(2.)); 
+draw((0.,3.)--(1.9619079708420344,0.), linewidth(2.)); 
+draw((0.,3.)--(-0.7864861198745158,0.), linewidth(2.)); 
+draw((-1.9619079708420344,0.)--(1.9619079708420344,0.), linewidth(2.)); 
+draw((-0.7864861198745158,1.7973654245306483)--(-0.7864861198745158,0.), linewidth(2.)); 
+draw((-0.7864861198745158,1.7973654245306483)--(1.9619079708420344,0.), linewidth(2.)); 
  /* dots and labels */
-dot((0.,4.),dotstyle); 
-label("$A$", (0.06900428956716685,4.1280005768297885), NE * labelscalefactor); 
-dot((-2.,0.),dotstyle); 
-label("$B$", (-2.2375221439269364,-0.3041482561588813), NE * labelscalefactor); 
-dot((2.,0.),dotstyle); 
-label("$C$", (2.149400680561848,0.05765981184019375), NE * labelscalefactor); 
-dot((-1.2,1.6),linewidth(2.pt) + dotstyle); 
-label("$X$", (-1.5139060079287863,1.6518766114611183), NE * labelscalefactor); 
-dot((-1.2,0.),linewidth(2.pt) + dotstyle); 
-label("$P$", (-1.231243454804509,-0.270228749783968), NE * labelscalefactor); 
-dot((-1.1587380349051477,1.6825239301897046),linewidth(1.pt) + dotstyle); 
-dot((-1.072492062008145,1.637421945759577),linewidth(1.pt) + dotstyle); 
-dot((-1.1177120230662512,1.5588560115331256),linewidth(1.pt) + dotstyle); 
-dot((-1.2,0.16606273511580258),linewidth(1.pt) + dotstyle); 
-dot((-1.0324697551333837,0.16331012749915502),linewidth(1.pt) + dotstyle); 
-dot((-1.0297171475167362,0.),linewidth(1.pt) + dotstyle); 
+dot((-1.9619079708420344,0.),linewidth(4.pt) + dotstyle); 
+label("$B$", (-2.1885829037708167,-0.22457081163650625), NE * labelscalefactor); 
+dot((1.9619079708420344,0.),linewidth(4.pt) + dotstyle); 
+label("$C$", (1.9927735628522643,-0.1823348877312226), NE * labelscalefactor); 
+dot((0.,3.),linewidth(4.pt) + dotstyle); 
+label("$A$", (0.025786249549054466,3.045696439315456), NE * labelscalefactor); 
+dot((-0.7864861198745158,1.7973654245306483),linewidth(4.pt) + dotstyle); 
+label("$X$", (-1.2050892471192118,1.7182816880065415), NE * labelscalefactor); 
+dot((-0.7864861198745158,0.),linewidth(4.pt) + dotstyle); 
+label("$P$", (-0.9034040763671857,-0.2426719218816278), NE * labelscalefactor); 
 clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
  /* re-scale y/x */
-currentpicture = yscale(1.0051282051282049) * currentpicture; 
+currentpicture = yscale(1.0566118421052633) * currentpicture; 
  /* end of picture */
  \end{asy}
  
  \item Prove the length of the diagonal of a rectangle is longer than any line segment between the two opposite sides.
  
  \item For the square $ABCD$, assume $E$ is the midpoint of $CD$, $BF\bot AE$ at $F$, prove: $CF=CB$.
- %problem 7, graph is here
  
+ %problem 7, graph is here
  \begin{asy}
   /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
-import graph; size(5.cm); 
+import graph; size(6.cm); 
 real labelscalefactor = 0.5; /* changes label-to-point distance */
 pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
 pen dotstyle = black; /* point style */ 
-real xmin = -7.086270484572427, xmax = 17.616372676863413, ymin = -8.648587670983188, ymax = 8.555038816445293;  /* image dimensions */
+real xmin = -3.018132430655583, xmax = 10.766509713584558, ymin = -5.300893330630993, ymax = 6.578554370909291;  /* image dimensions */
+pen zzttqq = rgb(0.6,0.2,0.); pen qqwuqq = rgb(0.,0.39215686274509803,0.); 
 
+draw((0.,0.)--(4.12634672946888,0.)--(4.12634672946888,4.126346729468878)--(0.,4.12634672946888)--cycle, linewidth(2.) + zzttqq); 
+draw((0.6923703644725991,1.3847407289451976)--(0.9581683273149537,1.2518417475240204)--(1.091067308736131,1.517639710366375)--(0.8252693458937764,1.6505386917875522)--cycle, linewidth(2.) + qqwuqq); 
  /* draw figures */
-draw((0.,0.)--(4.,0.), linewidth(2.)); 
-draw((4.,0.)--(4.,4.), linewidth(2.)); 
-draw((4.,4.)--(0.,4.), linewidth(2.)); 
-draw((0.,4.)--(0.,0.), linewidth(2.)); 
-draw((0.,0.)--(2.,4.), linewidth(2.)); 
-draw((4.,0.)--(0.796,1.592), linewidth(2.)); 
-draw((0.796,1.592)--(4.,4.), linewidth(2.)); 
-draw((0.6695301316495708,1.3390602632991415)--(0.9053047501922775,1.2285488382042102), linewidth(2.)); 
-draw((0.9053047501922775,1.2285488382042102)--(1.032099380779174,1.4746871990635317), linewidth(2.)); 
+draw((0.,0.)--(4.12634672946888,0.), linewidth(2.) + zzttqq); 
+draw((4.12634672946888,0.)--(4.12634672946888,4.126346729468878), linewidth(2.) + zzttqq); 
+draw((4.12634672946888,4.126346729468878)--(0.,4.12634672946888), linewidth(2.) + zzttqq); 
+draw((0.,4.12634672946888)--(0.,0.), linewidth(2.) + zzttqq); 
+draw((0.,0.)--(2.0631733647344404,4.126346729468879), linewidth(2.)); 
+draw((4.12634672946888,4.126346729468878)--(0.8252693458937764,1.6505386917875522), linewidth(2.)); 
+draw((4.12634672946888,0.)--(0.8252693458937764,1.6505386917875522), linewidth(2.)); 
  /* dots and labels */
 dot((0.,0.),linewidth(4.pt) + dotstyle); 
-label("$A$", (-0.44008315780516594,-0.5025970094144881), NE * labelscalefactor); 
-dot((4.,0.),dotstyle); 
-label("$B$", (4.118142663650257,-0.5320049179400068), NE * labelscalefactor); 
-dot((4.,4.),dotstyle); 
-label("$C$", (3.971103121022663,4.290892080245071), NE * labelscalefactor); 
-dot((0.,4.),dotstyle); 
-label("$D$", (-0.14600407254997738,4.261484171719553), NE * labelscalefactor); 
-dot((2.,4.),dotstyle); 
-label("$E$", (1.9419574327618614,4.290892080245071), NE * labelscalefactor); 
-dot((0.796,1.592),linewidth(2.pt) + dotstyle); 
-label("$F$", (0.2657066468072866,1.4677328617952696), NE * labelscalefactor); 
-dot((0.6695301316495708,1.3390602632991415),linewidth(1.pt) + dotstyle); 
-dot((0.9053047501922775,1.2285488382042102),linewidth(1.pt) + dotstyle); 
-dot((1.032099380779174,1.4746871990635317),linewidth(1.pt) + dotstyle); 
+label("$A$", (-0.4965515506116546,-0.4818720932137077), NE * labelscalefactor); 
+dot((4.12634672946888,0.),dotstyle); 
+label("$B$", (4.12634672946888,-0.5799335718820827), NE * labelscalefactor); 
+dot((4.12634672946888,4.126346729468878),linewidth(4.pt) + dotstyle); 
+label("$C$", (4.182381860136522,4.239087665535202), NE * labelscalefactor); 
+dot((0.,4.12634672946888),linewidth(4.pt) + dotstyle); 
+label("$D$", (0.04979097339786314,4.239087665535202), NE * labelscalefactor); 
+dot((2.0631733647344404,4.126346729468879),linewidth(4.pt) + dotstyle); 
+label("$E$", (2.1230908081006485,4.239087665535202), NE * labelscalefactor); 
+dot((0.8252693458937764,1.6505386917875522),linewidth(4.pt) + dotstyle); 
+label("$F$", (0.30194906140225597,1.5634101761552561), NE * labelscalefactor); 
 clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
  /* re-scale y/x */
-currentpicture = yscale(0.9993846153846184) * currentpicture; 
+currentpicture = yscale(0.9998584905660378) * currentpicture; 
  /* end of picture */
    \end{asy}
  \item For an isosceles triangle $ABC, AB=AC$, the circle which takes $AB$ as a diameter intersects $AC$ and $BC$ at $E$ and $D$ respectively. Make $DF\bot AC$ at $F$, prove: $DF^2=EF\cdot FA$.
@@ -260,36 +252,34 @@ import graph; size(6.cm);
 real labelscalefactor = 0.5; /* changes label-to-point distance */
 pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
 pen dotstyle = black; /* point style */ 
-real xmin = -4.2980315390440085, xmax = 3.7288327904638505, ymin = -3.633267873088471, ymax = 2.638769422039532;  /* image dimensions */
+real xmin = -4.298031539044008, xmax = 5.080637348048336, ymin = -3.9943088418843256, ymax = 2.6387694220395344;  /* image dimensions */
+pen qqwuqq = rgb(0.,0.39215686274509803,0.); 
 
+draw((2.345750090152916,-0.9550816307571283)--(2.434806317125606,-1.1093315406042126)--(2.5890562269726902,-1.020275313631523)--(2.5,-0.8660254037844387)--cycle, linewidth(2.) + qqwuqq); 
  /* draw figures */
 draw(shift((0.,0.)) * scale(2., 2.)*unitcircle, linewidth(2.)); 
-draw((-1.01,-1.73)--(1.01,1.73), linewidth(2.)); 
-draw((-1.01,-1.73)--(3.03,-1.73), linewidth(2.)); 
-draw((3.03,-1.73)--(1.01,1.73), linewidth(2.)); 
-draw((1.01,-1.73)--(2.52,-0.85), linewidth(2.)); 
-draw((2.251733624816546,-1.0063406689810859)--(2.410613439278983,-1.2990960283152644), linewidth(2.)); 
-draw((2.675846030858552,-1.1233798350349462)--(2.410613439278983,-1.2990960283152644), linewidth(2.)); 
+draw((1.,1.7320508075688772)--(3.,-1.7320508075688772), linewidth(2.)); 
+draw((1.,-1.7320508075688774)--(1.,1.7320508075688772), linewidth(2.)); 
+draw((1.,-1.7320508075688774)--(2.5,-0.8660254037844387), linewidth(2.)); 
+draw((-1.,-1.7320508075688776)--(3.,-1.7320508075688772), linewidth(2.)); 
+draw((1.,1.7320508075688772)--(-1.,-1.7320508075688776), linewidth(2.)); 
+draw((1.,1.7320508075688772)--(1.,1.7320508075688772), linewidth(2.)); 
  /* dots and labels */
-dot((-1.01,-1.73),dotstyle); 
-label("$B$", (-1.2165888518793806,-2.0463668707066867), NE * labelscalefactor); 
-dot((1.01,1.73),dotstyle); 
-label("$A$", (1.0588088816944998,1.8411207700486885), NE * labelscalefactor); 
-dot((3.03,-1.73),dotstyle); 
-label("$C$", (3.1075064720709826,-1.8700445371087109), NE * labelscalefactor); 
-dot((1.01,-1.73),linewidth(4.pt) + dotstyle); 
-label("$D$", (0.9580532624956565,-2.0295742675068795), NE * labelscalefactor); 
-dot((2.,0.03),linewidth(4.pt) + dotstyle); 
-label("$E$", (2.0495724704831266,0.027519624469506898), NE * labelscalefactor); 
-dot((2.52,-0.85),linewidth(2.pt) + dotstyle); 
-label("$F$", (2.5533505664773437,-0.8205068371207586), NE * labelscalefactor); 
-dot((2.821496270204694,-1.3728599479743768),linewidth(1.pt) + dotstyle); 
-dot((2.251733624816546,-1.0063406689810859),linewidth(1.pt) + dotstyle); 
-dot((2.410613439278983,-1.2990960283152644),linewidth(1.pt) + dotstyle); 
-dot((2.675846030858552,-1.1233798350349462),linewidth(1.pt) + dotstyle); 
+dot((1.,1.7320508075688772),linewidth(4.pt) + dotstyle); 
+label("$A$", (1.0756014848943096,1.899894881248016), NE * labelscalefactor); 
+dot((1.,-1.7320508075688774),linewidth(4.pt) + dotstyle); 
+label("$D$", (0.7901272304975866,-2.096744680306107), NE * labelscalefactor); 
+dot((-1.,-1.7320508075688776),linewidth(4.pt) + dotstyle); 
+label("$B$", (-1.35932597907774,-2.004385362707167), NE * labelscalefactor); 
+dot((3.,-1.7320508075688772),linewidth(4.pt) + dotstyle); 
+label("$C$", (2.704483995275612,-2.0631594739064925), NE * labelscalefactor); 
+dot((2.,0.),linewidth(4.pt) + dotstyle); 
+label("$E$", (2.032779867283322,0.06950113246902691), NE * labelscalefactor); 
+dot((2.5,-0.8660254037844387),linewidth(4.pt) + dotstyle); 
+label("$F$", (2.5365579632775397,-0.795317932321046), NE * labelscalefactor); 
 clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
  /* re-scale y/x */
-currentpicture = yscale(0.9598393574297188) * currentpicture; 
+currentpicture = yscale(0.949685654008439) * currentpicture; 
  /* end of picture */
  \end{asy}
  \item Prove: For a triangle, the symmetric points of the orthocenter along the sides are on the circumcircle.
@@ -337,35 +327,35 @@ currentpicture = yscale(0.9655944055944056) * currentpicture;
  
  \begin{asy}
   /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
-import graph; size(5.2cm); 
+import graph; size(6.cm); 
 real labelscalefactor = 0.5; /* changes label-to-point distance */
 pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
 pen dotstyle = black; /* point style */ 
-real xmin = -4.4731042961546335, xmax = 5.958373931239167, ymin = -2.966792382537209, ymax = 4.297987097254902;  /* image dimensions */
+real xmin = -4.473104296154635, xmax = 5.958373931239169, ymin = -2.9667923825372107, ymax = 4.297987097254902;  /* image dimensions */
 
  /* draw figures */
 draw(shift((0.,0.)) * scale(2., 2.)*unitcircle, linewidth(2.)); 
 draw((-2.,0.)--(2.,0.), linewidth(2.)); 
-draw((-2.,0.)--(0.9537480673823792,2.3110388634656065), linewidth(2.)); 
-draw((1.58,1.23)--(0.9537480673823792,2.3110388634656065), linewidth(2.)); 
+draw((1.6416256586779208,1.1423945013743206)--(0.9890930602927794,2.080086564268647), linewidth(2.)); 
+draw((-2.,0.)--(0.9890930602927794,2.080086564268647), linewidth(2.)); 
  /* dots and labels */
 dot((-2.,0.),linewidth(4.pt) + dotstyle); 
-label("$A$", (-2.349553371292324,-0.09813587000391401), NE * labelscalefactor); 
+label("$A$", (-2.349553371292325,-0.09813587000391474), NE * labelscalefactor); 
 dot((2.,0.),linewidth(4.pt) + dotstyle); 
-label("$B$", (2.1583354341171392,-0.18506485523219568), NE * labelscalefactor); 
+label("$B$", (2.15833543411714,-0.18506485523219643), NE * labelscalefactor); 
 dot((0.,0.),dotstyle); 
-label("$O$", (0.04720293571601328,0.1253958062973817), NE * labelscalefactor); 
-dot((0.9537480673823792,2.3110388634656065),dotstyle); 
-label("$H$", (1.0034217732271116,2.4352231280774372), NE * labelscalefactor); 
-dot((1.58,1.23),dotstyle); 
-label("$Q$", (1.6243430962862664,1.354820025954508), NE * labelscalefactor); 
-dot((0.4811375657135137,1.9412641867760487),linewidth(4.pt) + dotstyle); 
-label("$P$", (0.35766359724559066,2.0626703342419446), NE * labelscalefactor); 
+label("$O$", (0.0472029357160133,0.12539580629738104), NE * labelscalefactor); 
+dot((0.6949348032297175,1.8753841257886539),linewidth(4.pt) + dotstyle); 
+label("$P$", (0.5687768470857035,2.0005782019360288), NE * labelscalefactor); 
+dot((1.6416256586779208,1.1423945013743206),linewidth(4.pt) + dotstyle); 
+label("$Q$", (1.6864352285921824,1.24305418780386), NE * labelscalefactor); 
+dot((0.9890930602927794,2.080086564268647),linewidth(4.pt) + dotstyle); 
+label("$H$", (1.0406770526106612,2.1744361723925922), NE * labelscalefactor); 
 clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
  /* re-scale y/x */
-currentpicture = yscale(0.9664694280078895) * currentpicture; 
+currentpicture = yscale(1.005128205128205) * currentpicture; 
  /* end of picture */
- \end{asy}
+   \end{asy}
  
 \item In the following figure, two circles  tangent internally at $P$, a secant intersects the two circles at $A, B, C, D$, prove: $\angle APB=\angle CPD$.
 %problem 12, graph
@@ -408,34 +398,34 @@ currentpicture = yscale(1.0290598290598292) * currentpicture;
 
 \begin{asy}
  /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
-import graph; size(5.1cm); 
+import graph; size(6.cm); 
 real labelscalefactor = 0.5; /* changes label-to-point distance */
 pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
 pen dotstyle = black; /* point style */ 
-real xmin = -4.4731042961546335, xmax = 2.891022595326942, ymin = -2.966792382537209, ymax = 4.297987097254902;  /* image dimensions */
+real xmin = -4.473104296154634, xmax = 8.678009326238264, ymin = -4.432166704956815, ymax = 4.297987097254902;  /* image dimensions */
 
  /* draw figures */
 draw(shift((0.,0.)) * scale(1.4142135623730951, 1.4142135623730951)*unitcircle, linewidth(2.)); 
-draw(shift((-2.3619717977535073,0.)) * scale(0.9219393033124031, 0.9219393033124031)*unitcircle, linewidth(2.)); 
-draw((-3.136118898030146,0.5006679000349743)--(1.,1.), linewidth(2.)); 
-draw((-1.4404026430075607,0.026122251300388356)--(-3.136118898030146,0.5006679000349743), linewidth(2.)); 
-draw((-1.4404026430075607,0.026122251300388356)--(1.,1.), linewidth(2.)); 
-draw((-1.4404026430075607,0.026122251300388356)--(-1.7471093919730598,0.6869616444533417), linewidth(2.)); 
-draw((-1.4404026430075607,0.026122251300388356)--(-1.209250913144812,0.7332886396627447), linewidth(2.)); 
+draw(shift((-2.3743902242146904,0.)) * scale(0.9601766618415952, 0.9601766618415952)*unitcircle, linewidth(2.)); 
+draw((-1.4142135623730951,0.)--(-3.2302131999452177,0.43532316289971834), linewidth(2.)); 
+draw((-1.4142135623730951,0.)--(-1.710222996915708,0.693412659335875), linewidth(2.)); 
+draw((-1.4142135623730951,0.)--(-1.17704306258552,0.7839449144036201), linewidth(2.)); 
+draw((-1.4142135623730951,0.)--(0.8523121072560532,1.1285229602559028), linewidth(2.)); 
+draw((0.8523121072560532,1.1285229602559028)--(-3.2302131999452177,0.43532316289971834), linewidth(2.)); 
  /* dots and labels */
-dot((-3.136118898030146,0.5006679000349743),dotstyle); 
-label("$A$", (-3.3430274881869715,0.7214802764341702), NE * labelscalefactor); 
-dot((1.,1.),dotstyle); 
-label("$D$", (1.0530954790718439,1.1188699231920294), NE * labelscalefactor); 
-dot((-1.4404026430075607,0.026122251300388356),dotstyle); 
-label("$P$", (-1.318823975014127,-0.22232013461574496), NE * labelscalefactor); 
-dot((-1.7471093919730598,0.6869616444533417),dotstyle); 
-label("$B$", (-1.69137676884962,0.808409261662452), NE * labelscalefactor); 
-dot((-1.209250913144812,0.7332886396627447),linewidth(4.pt) + dotstyle); 
-label("$C$", (-1.306405548552944,0.8580829675071843), NE * labelscalefactor); 
+dot((-1.4142135623730951,0.),linewidth(4.pt) + dotstyle); 
+label("$P$", (-1.3684976808588603,0.10055895337501483), NE * labelscalefactor); 
+dot((0.8523121072560532,1.1285229602559028),linewidth(4.pt) + dotstyle); 
+label("$D$", (0.9040743615376461,1.2306357613426768), NE * labelscalefactor); 
+dot((-1.17704306258552,0.7839449144036201),linewidth(4.pt) + dotstyle); 
+label("$C$", (-1.194639710402297,0.4855301736716909), NE * labelscalefactor); 
+dot((-3.2302131999452177,0.43532316289971834),linewidth(4.pt) + dotstyle); 
+label("$A$", (-3.715580282022465,0.1502326592197472), NE * labelscalefactor); 
+dot((-1.710222996915708,0.693412659335875),linewidth(4.pt) + dotstyle); 
+label("$B$", (-1.716213621771987,0.7835724087400853), NE * labelscalefactor); 
 clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
  /* re-scale y/x */
-currentpicture = yscale(0.993799229093347) * currentpicture; 
+currentpicture = yscale(1.0042674253200568) * currentpicture; 
  /* end of picture */
 \end{asy}
 \item Two circles intersect at $A,B$, the line passes $A$ intersect the two circles at $C$ and $D$, the tangent lines at $C$ and $D$ intersect at $P$. Prove: $B, C, P, D$ are cyclic.
@@ -447,25 +437,25 @@ import graph; size(6.cm);
 real labelscalefactor = 0.5; /* changes label-to-point distance */
 pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
 pen dotstyle = black; /* point style */ 
-real xmin = -4.435849016771084, xmax = 2.928277874710491, ymin = -2.966792382537209, ymax = 4.297987097254902;  /* image dimensions */
+real xmin = -4.435849016771084, xmax = 2.928277874710491, ymin = -2.9667923825372085, ymax = 4.297987097254902;  /* image dimensions */
 
  /* draw figures */
 draw(shift((0.,0.)) * scale(1.4142135623730951, 1.4142135623730951)*unitcircle, linewidth(2.)); 
 draw(shift((-2.,0.)) * scale(1., 1.)*unitcircle, linewidth(2.)); 
-draw((-2.8551526319614684,0.5183762880855693)--(1.118100142291255,0.8659399931913733), linewidth(2.)); 
-draw((-2.8551526319614684,0.5183762880855693)--(-0.99,3.59), linewidth(2.)); 
-draw((-0.99,3.59)--(1.118100142291255,0.8659399931913733), linewidth(2.)); 
+draw((-2.8551526319614684,0.5183762880855693)--(1.118100142291255,0.8659399931913732), linewidth(2.)); 
+draw((1.118100142291255,0.8659399931913732)--(-0.9925018830610111,3.591145484820686), linewidth(2.)); 
+draw((-0.9925018830610111,3.591145484820686)--(-2.8551526319614684,0.5183762880855693), linewidth(2.)); 
  /* dots and labels */
 dot((-2.8551526319614684,0.5183762880855693),dotstyle); 
 label("$C$", (-3.119495811885676,0.6221328647447055), NE * labelscalefactor); 
-dot((1.118100142291255,0.8659399931913733),dotstyle); 
+dot((1.118100142291255,0.8659399931913732),dotstyle); 
 label("$D$", (1.1648613172224918,0.9946856585801983), NE * labelscalefactor); 
-dot((-0.99,3.59),dotstyle); 
-label("$P$", (-0.9462711811786343,3.714321053579296), NE * labelscalefactor); 
 dot((-1.25,0.6614378277661476),linewidth(4.pt) + dotstyle); 
 label("$A$", (-1.3809161073200427,0.8705013939683673), NE * labelscalefactor); 
 dot((-1.25,-0.6614378277661477),linewidth(4.pt) + dotstyle); 
 label("$B$", (-1.1201291516351977,-0.7687308989078011), NE * labelscalefactor); 
+dot((-0.9925018830610111,3.591145484820686),linewidth(4.pt) + dotstyle); 
+label("$P$", (-0.9462711811786343,3.68948420065693), NE * labelscalefactor); 
 clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
  /* re-scale y/x */
 currentpicture = yscale(0.9967806267806267) * currentpicture; 

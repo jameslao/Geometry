@@ -14,9 +14,15 @@ The way Git works is that you fork this repository, update it, and raise a pull 
 
 ## Drawings
 
+### What you need to do
+
 The drawings are done with [Geogebra](https://www.geogebra.org/geometry), specifically, with GeoGebra Classic **5** (Download for [Windows](https://download.geogebra.org/installers/5.0/GeoGebra-Windows-Installer-5-0-625-0.exe) | [Mac](https://download.geogebra.org/package/mac)), which offers much greater control over exports than its successor 6 does. To make sure the sizes are consistent in the final output, *the width of the drawings should be ~**3-4 units*** (This can be tricky to see if you use the web version of GeoGebra, but open the properties panel and you'll figure out). Please download the .ggb file from Geogebra and put it in the figures folder.
 
 The *line width*s are set to **2**, *point size*s to **1**, and all colors to **Black**. To change the default settings in GeoGebra Classic 5, go to menu Options - Advanced - Defaults (4th button on the toolbar) and update all the entries there. To avoid showing labels for all the line segments, goto menu Options - Labeling - New points only. Remember to save settings (Options - Save Settings).
+
+Please upload / commit the .ggb files.
+
+### What happens afterwards
 
 The drawings are then exported to [Asymptote](https://asymptote.sourceforge.io/), which can only be done with GeoGebra Classic. 
 

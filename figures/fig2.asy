@@ -1,23 +1,5 @@
- /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
-import graph; size(6.2cm); 
-real labelscalefactor = 0.5; /* changes label-to-point distance */
-pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
-pen dotstyle = black; /* point style */ 
-real xmin = -3., xmax = 3.2, ymin = -3., ymax = 3.;  /* image dimensions */
-
- /* draw figures */
-draw((-2.52843622753421,-1.9661210101203501)--(-0.8331105346359746,1.8868919282847216), linewidth(0.8)); 
-draw((-0.8331105346359746,1.8868919282847216)--(2.660287862851298,-1.9661210101203501), linewidth(0.8)); 
-draw((-2.52843622753421,-1.9661210101203501)--(2.660287862851298,-1.9661210101203501), linewidth(0.8)); 
-draw((-0.8331105346359746,1.8868919282847216)--(0.065925817658544,-1.9661210101203501), linewidth(0.8)); 
- /* dots and labels */
-dot((-2.52843622753421,-1.9661210101203501),linewidth(1.pt) + dotstyle); 
-label("$B$", (-2.3229422041526058,-1.8890607513522542), NE * labelscalefactor); 
-dot((2.660287862851298,-1.9661210101203501),linewidth(1.pt) + dotstyle); 
-label("$C$", (2.608914357005897,-1.8890607513522542), NE * labelscalefactor); 
-dot((-0.8331105346359746,1.8868919282847216),linewidth(1.pt) + dotstyle); 
-label("$A$", (-0.7303635229451725,1.9382654341301253), NE * labelscalefactor); 
-dot((0.065925817658544,-1.9661210101203501),linewidth(1.pt) + dotstyle); 
-label("$D$", (0.06592581765854405,-1.8633739984295536), NE * labelscalefactor); 
+import graph; size(4.05cm); real lsf=0.5; pen dps=linewidth(0.7)+fontsize(10); defaultpen(dps); pen ds=black; real xmin=-7.922654341301322,xmax=26.343474057581194,ymin=-14.372822671784714,ymax=8.051712629732851; 
+pair B=(-2.52843622753421,-1.9661210101203501), C=(2.660287862851298,-1.9661210101203501), A=(-0.8331105346359746,1.8868919282847216), D=(0.065925817658544,-1.9661210101203501); 
+draw(B--A,linewidth(1.2)); draw(A--C,linewidth(1.2)); draw(B--C,linewidth(1.2)); draw(A--D,linewidth(0.8)); 
+dot(B,linewidth(1.pt)+ds); label("$B$",(-2.3229422041526058,-1.8890607513522557),NE*lsf); dot(C,linewidth(1.pt)+ds); label("$C$",(2.608914357005897,-1.8890607513522557),NE*lsf); dot(A,linewidth(1.pt)+ds); label("$A$",(-0.7303635229451725,1.938265434130124),NE*lsf); dot(D,linewidth(1.pt)+ds); label("$D$",(0.06592581765854405,-1.8633739984295552),NE*lsf); 
 clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
- /* end of picture */

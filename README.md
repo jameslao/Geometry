@@ -12,6 +12,8 @@ To work on the project, you can open the Jupyter Notebook, e.g. with [Google CoL
 
 The way Git works is that you fork this repository, update it, and raise a pull request so that the changes be merged backed into the main branch. A quick tutorial can be seen [here](https://guides.github.com/activities/hello-world/).
 
+If you are not familiar with Git, you can edit the notebook or plain markdown files, and upload it to the specified Google Drive folder.
+
 ## Drawings
 
 ### What you need to do

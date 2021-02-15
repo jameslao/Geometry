@@ -1,35 +1,5 @@
- /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
-import graph; size(6.730542673121786cm); 
-real labelscalefactor = 0.5; /* changes label-to-point distance */
-pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
-pen dotstyle = black; /* point style */ 
-real xmin = -3.5594537996027755, xmax = 3.1710888735190106, ymin = -3.1909561267568014, ymax = 3.3359734907075183;  /* image dimensions */
-
- /* draw figures */
-draw(circle((0.,0.), 2.), linewidth(0.8)); 
-draw((-1.6013224887226873,-1.1982346544441864)--(1.6018515672646818,-1.1975272675190667), linewidth(0.8)); 
-draw((0.,0.)--(-0.813612417671901,-1.827028963593649), linewidth(0.8)); 
-draw((0.,0.)--(0.8142855675308807,-1.8267290479189604), linewidth(0.8)); 
-draw((0.,0.)--(-1.6013224887226873,-1.1982346544441864), linewidth(0.8) + linetype("4 4")); 
-draw((0.,0.)--(1.6018515672646818,-1.1975272675190667), linewidth(0.8) + linetype("4 4")); 
-draw((0.5341269340085177,-1.1982346544441864)--(-1.0671955547141694,-2.3964693088883724), linewidth(0.8) + linetype("4 4")); 
-draw((-0.813612417671901,-1.827028963593649)--(-1.0671955547141694,-2.3964693088883724), linewidth(0.8) + linetype("4 4")); 
- /* dots and labels */
-dot((0.,0.),linewidth(1.pt) + dotstyle); 
-label("$O$", (0.049022020104535095,0.021605418060992303), NE * labelscalefactor); 
-dot((-1.6013224887226873,-1.1982346544441864),linewidth(1.pt) + dotstyle); 
-label("$A$", (-1.783495480812657,-1.403685971541268), NE * labelscalefactor); 
-dot((1.6018515672646818,-1.1975272675190667),linewidth(1.pt) + dotstyle); 
-label("$B$", (1.5761199375355286,-1.4149978079666827), NE * labelscalefactor); 
-dot((-0.5335977773570848,-1.1982346544441864),linewidth(1.pt) + dotstyle); 
-label("$C$", (-0.4486987826137146,-1.166137406607558), NE * labelscalefactor); 
-dot((0.5341269340085177,-1.1982346544441864),linewidth(1.pt) + dotstyle); 
-label("$D$", (0.5806783320990291,-1.1774492430329728), NE * labelscalefactor); 
-dot((-0.813612417671901,-1.827028963593649),linewidth(1.pt) + dotstyle); 
-label("$E$", (-0.7428065296744986,-1.8109120828561995), NE * labelscalefactor); 
-dot((0.8142855675308807,-1.8267290479189604),linewidth(1.pt) + dotstyle); 
-label("$F$", (0.8069150606073244,-1.7769765735799552), NE * labelscalefactor); 
-dot((-1.0671955547141694,-2.3964693088883724),linewidth(1.pt) + dotstyle); 
-label("$G$", (-1.059537949586112,-2.5574932869335743), NE * labelscalefactor); 
+import graph; size(6cm); real lsf=0.5; pen dps=linewidth(0.7)+fontsize(10); defaultpen(dps); pen ds=black; real xmin=-3.5594537996027755,xmax=3.1710888735190106,ymin=-2.6027406326352334,ymax=3.3359734907075187; 
+pair O=(0.,0.), A=(-1.6013224887226873,-1.1982346544441864), B=(1.6018515672646818,-1.1975272675190667), C=(-0.5335977773570848,-1.1982346544441864), D=(0.5341269340085177,-1.1982346544441864), F=(0.8142855675308807,-1.8267290479189604), G=(-1.0671955547141694,-2.3964693088883724); 
+draw(circle(O,2.),linewidth(1.2)); draw(A--B,linewidth(0.8)); draw(O--(-0.813612417671901,-1.827028963593649),linewidth(0.8)); draw(O--F,linewidth(0.8)); draw(O--A,linewidth(0.8)+linetype("4 4")); draw(O--B,linewidth(0.8)+linetype("4 4")); draw(D--G,linewidth(0.8)+linetype("4 4")); draw((-0.813612417671901,-1.827028963593649)--G,linewidth(0.8)+linetype("4 4")); 
+dot(O,linewidth(1.pt)+ds); label("$O$",(0.07011859503793375,0.02936873139975376),NE*lsf); dot(A,linewidth(1.pt)+ds); label("$A$",(-1.9172805702160387,-1.4114956634093763),NE*lsf); dot(B,linewidth(1.pt)+ds); label("$B$",(1.560667968978413,-1.510865621672075),NE*lsf); dot(C,linewidth(1.pt)+ds); label("$C$",(-0.39360787685465987,-1.14650910804218),NE*lsf); dot(D,linewidth(1.pt)+ds); label("$D$",(0.6000917057723264,-1.1630707677526297),NE*lsf); dot((-0.813612417671901,-1.827028963593649),linewidth(1.pt)+ds); label("$E$",(-0.675156091932306,-1.792413836749721),NE*lsf); dot(F,linewidth(1.pt)+ds); label("$F$",(0.7822699625872739,-1.7096055381974722),NE*lsf); dot(G,linewidth(1.pt)+ds); label("$G$",(-1.321060820639847,-2.6204968222722096),NE*lsf); 
 clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
- /* end of picture */

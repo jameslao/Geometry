@@ -1,0 +1,291 @@
+\documentclass[12pt]{article}
+
+% Use this form to include EPS (latex) or PDF (pdflatex) files:
+%\usepackage{asymptote}
+
+% Use this form with latex or pdflatex to include inline LaTeX code by default:
+\usepackage[inline]{asymptote}
+
+\usepackage{fourier}
+% Use this form with latex or pdflatex to create PDF attachments by default:
+%\usepackage[attach]{asymptote}
+
+% Enable this line to support the attach option:
+%\usepackage[dvips]{attachfile2}
+
+\newtheorem{example}{Example}
+
+\begin{document}
+
+% Optional subdirectory for latex files (no spaces):
+\def\asylatexdir{}
+% Optional subdirectory for asy files (no spaces):
+\def\asydir{}
+
+\begin{asydef}
+// Global Asymptote definitions can be put here.
+import three;
+usepackage("bm");
+texpreamble("\def\V#1{\bm{#1}}");
+// One can globally override the default toolbar settings here:
+// settings.toolbar=true;
+\end{asydef}
+
+
+ \begin{example}[10]
+ In the following figure, $P$ is a point outside of the circle, $PA$ and $PB$ are tangent lines with tangent points $A$ and $B$ respectively. $PO$ and $AB$ 
+ intersect at $M$. $CD$ is a chord passing $M$, prove: $PO$ bisects $\angle CPD$.
+ 
+ 
+ \begin{asy}
+   /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+import graph; size(7.2cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -3.2811712953637273, xmax = 1.4299488249777348, ymin = -1.4703513591822404, ymax = 2.4648742245743853;  /* image dimensions */
+pen qqwuqq = rgb(0.,0.39215686274509803,0.); 
+
+draw(arc((-2.4527295401217146,0.),0.13938225208110835,0.,21.52399341633416)--(-2.4527295401217146,0.)--cycle, linewidth(2.) + qqwuqq); 
+draw(arc((-2.4527295401217146,0.),0.13938225208110835,-21.523993416334164,0.)--(-2.4527295401217146,0.)--cycle, linewidth(2.) + qqwuqq); 
+draw(arc((-0.7636784314342042,0.6661521251038961),0.13938225208110835,-62.62198960933438,-41.09799619300021)--(-0.7636784314342042,0.6661521251038961)--cycle, linewidth(2.) + qqwuqq); 
+draw(arc((0.10336010893241909,-1.0081071809583155),0.13938225208110835,95.85401697433146,117.37801039066565)--(0.10336010893241909,-1.0081071809583155)--cycle, linewidth(2.) + qqwuqq); 
+ /* draw figures */
+draw(shift((0.,0.)) * scale(1.013392027015332, 1.013392027015332)*unitcircle, linewidth(2.)); 
+draw((-0.41870225951096157,-0.9228498351837414)--(-0.41870225951096157,0.9228498351837416), linewidth(2.)); 
+draw((0.,0.)--(-2.4527295401217146,0.), linewidth(2.)); 
+draw((0.,0.)--(-0.7636784314342042,0.6661521251038961), linewidth(2.)); 
+draw((0.,0.)--(0.10336010893241909,-1.0081071809583155), linewidth(2.)); 
+draw((0.,0.)--(-0.41870225951096157,0.9228498351837416), linewidth(2.) + linetype("4 4")); 
+draw((0.,0.)--(-0.41870225951096157,-0.9228498351837414), linewidth(2.) + linetype("4 4")); 
+draw((-2.4527295401217146,0.)--(-0.41870225951096157,0.9228498351837416), linewidth(2.)); 
+draw((-2.4527295401217146,0.)--(-0.41870225951096157,-0.9228498351837414), linewidth(2.)); 
+draw((-0.7636784314342042,0.6661521251038961)--(0.10336010893241909,-1.0081071809583155), linewidth(2.)); 
+draw((-2.4527295401217146,0.)--(-0.7636784314342042,0.6661521251038961), linewidth(2.)); 
+draw((0.10336010893241909,-1.0081071809583155)--(-2.4527295401217146,0.), linewidth(2.)); 
+ /* dots and labels */
+dot((0.,0.),linewidth(1.pt) + dotstyle); 
+label("$O$", (0.017542003889170304,0.007100512877508031), NE * labelscalefactor); 
+dot((-2.4527295401217146,0.),linewidth(1.pt) + dotstyle); 
+label("$P$", (-2.612136485374407,-0.20197286524415448), NE * labelscalefactor); 
+dot((-0.41870225951096157,-0.9228498351837414),linewidth(1.pt) + dotstyle); 
+label("$B$", (-0.6514928061001497,-1.0847271284245072), NE * labelscalefactor); 
+dot((-0.41870225951096157,0.9228498351837416),linewidth(1.pt) + dotstyle); 
+label("$A$", (-0.4749419534640792,0.9827762774452664), NE * labelscalefactor); 
+dot((-0.4187022595109616,0.),linewidth(1.pt) + dotstyle); 
+label("$M$", (-0.6607849562388903,-0.20661894031352476), NE * labelscalefactor); 
+dot((0.10336010893241909,-1.0081071809583155),linewidth(1.pt) + dotstyle); 
+label("$D$", (0.017542003889170304,-1.2101711552975047), NE * labelscalefactor); 
+dot((-0.7636784314342042,0.6661521251038961),linewidth(1.pt) + dotstyle); 
+label("$C$", (-0.8652122592911825,0.3694943682883897), NE * labelscalefactor); 
+label("1", (-2.036023176772493,0.0349769632937297), NE * labelscalefactor,qqwuqq); 
+label("2", (-2.036023176772493,-0.14621996441171115), NE * labelscalefactor,qqwuqq); 
+label("3", (-0.5446330795046334,0.25798856662350306), NE * labelscalefactor,qqwuqq); 
+label("4", (-0.08467164763697581,-0.6108274713487389), NE * labelscalefactor,qqwuqq); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* re-scale y/x */
+currentpicture = yscale(0.9976387249114522) * currentpicture; 
+ /* end of picture */
+  \end{asy}
+ \end{example} 
+
+Analysis: To prove $\angle 1=\angle 2$, from the converse of the angle bisector theorem, we only need to prove $\frac{PC}{PD}=\frac{MC}{MD}$. But it is hard to find the relation between $PC, PD$ and other 
+line segments, hence we are trying to match $\angle 1, \angle 2$ with other angles.  After connecting $OC, OD$, it is not that hard to see that $\triangle OCD$ is an isosceles triangle, $\angle 3=\angle 4$.
+And $\angle 3, \angle 4 $, $\angle 1, \angle 2$ are all the angles in the quadrilateral $PCOD$, if we can prove $P, C, O, D$ are cyclic, then we will get $\angle 1=\angle 4, \angle 2=\angle 3$ and
+$\angle 1=\angle 2$ will follow. So, now the key is to prove $P, C, O, D$ are cyclic. 
+To prove $P, C, O, D$ are cyclic, there are no other angle relations can be used. According to the method for auxiliary circle  in page 44, %should ref to that place
+if we can prove $MC\cdot MD=MO\cdot MP$, then we are done. Since $MC\cdot MD=MA\cdot MB$, so we only need to prove $MO\cdot MP=MA\cdot MB=MA^2$.
+Connect the radius $OA$, we have the right $\triangle PAO$, according to the mean proportional theorem about the altitude in a right triangle  we have $MA^2=MO\cdot MP$.
+
+
+Proof: Omitted.
+
+Example 9 and example 10 are the problems about proving the equality of two line segments or two angles inside a circle. Since the relation between the conditions and the conclusions are hidden,
+usually it is hard to prove them directly. If we say the difficulty for proving example 7 and example 8 is to divide a complex problem into several simpler ones, then the difficulty for example 9 and
+example 10 is about how to convert the hidden relation between the conditions and the conclusions into a clear relation.
+In order to accomplish this kind of relatively complicated conversion, often we need to find out their relation to the "intermediate angles" and "intermediate line segments", usually we need to add some
+auxiliary lines  during the finding process, 
+For example, in example 9, first of all,  to prove $AM=AN$ we need to add two auxiliary lines $OM$ and $ ON$; secondly, to prove $OM=ON$ we need to add two more auxiliary lines $"OC$ and $OD$",
+and finally in order to prove $\angle OMC$ and $\angle OND$ are equal, we made two auxiliary circles through $O, C, A, M$ and $O, D, N, A$.
+In Example 10, first of all,  in order to find the intermediate angles of $\angle 1=\angle 2$, we add two auxiliary lines $OC, OD$; later on, in order to prove $\angle 1=\angle 4, \angle 2=\angle 3$, we considered to make
+an auxiliary circle passing $O, C, P, D$. In order to prove these 4 points are cyclic, we make the auxiliary  radius $OA$ and made the right triangle $PAO$.
+So we can see those auxiliary lines were added  via step by step thinking process with logic, gradually make the conditions approach the conclusions.
+
+
+\begin{example}[11]
+Prove: For any two inscribed triangles in a circle or in two congruent circles, the ratio of the areas is equal to the ratio of the products of three sides of each triangle.
+
+\begin{asy}
+ /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+import graph; size(6.cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -4.936133329991904, xmax = 4.076256684495149, ymin = -4.351756598787002, ymax = 3.1230165789088673;  /* image dimensions */
+pen zzttqq = rgb(0.6,0.2,0.); pen qqwuqq = rgb(0.,0.39215686274509803,0.); 
+
+draw((-2.9653457178446687,-0.2593682357209106)--(-1.0473419405140252,-0.30266624912340867)--(-1.4341228700156026,0.8239825910919708)--cycle, linewidth(2.) + zzttqq); 
+draw((0.4640574624180005,0.838295504046951)--(1.8674992289568388,-0.4872564452672274)--(0.13044502598402574,-0.4835782282725754)--cycle, linewidth(2.) + zzttqq); 
+draw((-1.270852414110177,-0.29762060761021336)--(-1.2665972515117938,-0.10912655683272326)--(-1.455091302289284,-0.10487139423434017)--(-1.459346464887667,-0.29336544501183026)--cycle, linewidth(2.) + qqwuqq); 
+draw((0.6497985589904092,-0.48467796078988395)--(0.6501977964488957,-0.2961363096973536)--(0.46165614535636545,-0.295737072238867)--(0.4612569078978789,-0.4842787233313974)--cycle, linewidth(2.) + qqwuqq); 
+ /* draw figures */
+draw(shift((-2.,0.)) * scale(0.9995820309819583, 0.9995820309819583)*unitcircle, linewidth(2.)); 
+draw(shift((1.,0.)) * scale(0.9949742487598182, 0.9949742487598182)*unitcircle, linewidth(2.)); 
+draw((-2.9653457178446687,-0.2593682357209106)--(-1.0473419405140252,-0.30266624912340867), linewidth(2.) + zzttqq); 
+draw((-1.0473419405140252,-0.30266624912340867)--(-1.4341228700156026,0.8239825910919708), linewidth(2.) + zzttqq); 
+draw((-1.4341228700156026,0.8239825910919708)--(-2.9653457178446687,-0.2593682357209106), linewidth(2.) + zzttqq); 
+draw((0.4640574624180005,0.838295504046951)--(1.8674992289568388,-0.4872564452672274), linewidth(2.) + zzttqq); 
+draw((1.8674992289568388,-0.4872564452672274)--(0.13044502598402574,-0.4835782282725754), linewidth(2.) + zzttqq); 
+draw((0.13044502598402574,-0.4835782282725754)--(0.4640574624180005,0.838295504046951), linewidth(2.) + zzttqq); 
+draw((-1.4341228700156026,0.8239825910919708)--(-1.459346464887667,-0.29336544501183026), linewidth(2.) + linetype("4 4")); 
+draw((0.4640574624180005,0.838295504046951)--(1.5359425375819997,-0.8382955040469512), linewidth(2.) + linetype("4 4")); 
+draw((-2.5658771299843974,-0.8239825910919708)--(-1.4341228700156026,0.8239825910919708), linewidth(2.) + linetype("4 4")); 
+draw((0.4640574624180005,0.838295504046951)--(0.4612569078978789,-0.4842787233313974), linewidth(2.) + linetype("4 4")); 
+ /* dots and labels */
+dot((-2.,0.),linewidth(1.pt) + dotstyle); 
+label("$O$", (-2.234193917364622,-0.04998463920935574), NE * labelscalefactor); 
+dot((1.,0.),linewidth(1.pt) + dotstyle); 
+label("$O'$", (0.6188407913635281,-0.2099678939043922), NE * labelscalefactor); 
+dot((-2.9653457178446687,-0.2593682357209106),linewidth(1.pt) + dotstyle); 
+label("$B$", (-3.5673877064899253,-0.503270527511959), NE * labelscalefactor); 
+dot((-1.0473419405140252,-0.30266624912340867),linewidth(1.pt) + dotstyle); 
+label("$C$", (-0.9365519626159928,-0.5388223618886337), NE * labelscalefactor); 
+dot((0.13044502598402574,-0.4835782282725754),linewidth(1.pt) + dotstyle); 
+label("$B'$", (-0.42105036415420877,-0.8676768298728753), NE * labelscalefactor); 
+dot((-1.459346464887667,-0.29336544501183026),linewidth(1.pt) + dotstyle); 
+label("$D$", (-1.7897959876561873,-0.7254694923661763), NE * labelscalefactor); 
+dot((0.4612569078978789,-0.4842787233313974),linewidth(1.pt) + dotstyle); 
+label("$D'$", (0.4233057022918169,-0.7165815337720076), NE * labelscalefactor); 
+dot((1.7838311352762273,-0.487079277851519),linewidth(1.pt) + dotstyle); 
+label("$C'$", (1.9609225390830005,-0.7165815337720076), NE * labelscalefactor); 
+dot((0.4640574624180005,0.838295504046951),linewidth(1.pt) + dotstyle); 
+label("$A'$", (0.3077622405676239,0.9721305991200437), NE * labelscalefactor); 
+dot((1.5359425375819997,-0.8382955040469512),linewidth(1.pt) + dotstyle); 
+label("$E'$", (1.1254544312311434,-1.3209627181754786), NE * labelscalefactor); 
+dot((-1.4341228700156026,0.8239825910919708),linewidth(1.pt) + dotstyle); 
+label("$A$", (-1.3987258095127648,0.8388112202075134), NE * labelscalefactor); 
+dot((-2.5658771299843974,-0.8239825910919708),linewidth(1.pt) + dotstyle); 
+label("$E$", (-2.954118563492286,-1.1432035462921049), NE * labelscalefactor); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* re-scale y/x */
+currentpicture = yscale(1.0007372175980978) * currentpicture; 
+ /* end of picture */
+\end{asy}
+\end{example}
+
+
+Analysis: In the figure above, assume $O, O'$ are the centers of the two congruent circles, $\triangle ABC$ and $\triangle A'B'C'$ are the two inscribed triangles, the sides are 
+$a, b,c$ and $a', b', c'$ respectively. To prove the conclusion $\frac{S_{\triangle ABC}}{S_{\triangle A'B'C'}}=\frac{a\cdot b\cdot c}{a'\cdot b'\cdot c'}$, we  can make the altitudes $AD $ and
+$A'D'$ on $BC$ and $B'C'$ respectively. To prove $\frac{S_{\triangle ABC}}{S_{\triangle A'B'C'}}=\frac{a\cdot b\cdot c}{a'\cdot b'\cdot c'}$, we only need to prove $\frac{\frac12 AD\cdot a}{\frac12 A'D'\cdot a'}=\frac{a\cdot b\cdot c}{a'\cdot b'\cdot c'}$, i.e. $\frac{AD}{A'D'}=\frac{bc}{b'c'}$. By the "simple question" in example 22, "the product of two sides of a triangle is equal to the product of the altitude on the third side and the circumdiameter",
+if we add the diameters $AE$ and $A'E'$, then it is easy to get  $\frac{AD}{A'D'}=\frac{bc}{b'c'}$ since $AE=A'E'$.
+
+Proof: Omitted.
+
+\begin{example}[12]
+In the following figure, two circles $O_1$ and $O_2$ are tangent at $P$, $AB$ is a common tangent line, $AC$ is the diameter of $\ \odot O_1$, $CD$ is a tangent line of $\odot O_2$ with tangent point
+$D$, prove: $AC=CD$.
+
+\begin{asy}
+ /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+import graph; size(6.cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -2.27726633209021, xmax = 5.600696967286586, ymin = -3.7877752261752087, ymax = 2.746117411670832;  /* image dimensions */
+
+ /* draw figures */
+draw(shift((0.,0.)) * scale(1.228801280884358, 1.228801280884358)*unitcircle, linewidth(2.)); 
+draw(shift((2.,0.)) * scale(0.771198719115642, 0.771198719115642)*unitcircle, linewidth(2.)); 
+draw((2.176451254750035,0.7507412464110019)--(0.2811513070186808,1.1962050536863345), linewidth(2.)); 
+draw((2.1372297062287133,-0.7588909487495473)--(-0.2811513070186808,-1.1962050536863345), linewidth(2.)); 
+draw((0.2811513070186808,1.1962050536863345)--(-0.2811513070186808,-1.1962050536863345), linewidth(2.)); 
+draw((2.176451254750035,0.7507412464110019)--(-0.2811513070186808,-1.1962050536863345), linewidth(2.) + linetype("4 4")); 
+draw((1.228801280884358,0.)--(0.2811513070186808,1.1962050536863345), linewidth(2.) + linetype("4 4")); 
+ /* dots and labels */
+dot((0.,0.),linewidth(1.pt) + dotstyle); 
+label("$O_{1}$", (0.03018445678050846,0.01913011573271048), NE * labelscalefactor); 
+dot((1.228801280884358,0.),linewidth(1.pt) + dotstyle); 
+label("$P$", (1.249948005106107,-0.15179216492437977), NE * labelscalefactor); 
+dot((2.,0.),linewidth(1.pt) + dotstyle); 
+label("$O_{2}$", (2.0346366572136576,0.01913011573271048), NE * labelscalefactor); 
+dot((0.2811513070186808,-1.1962050536863347),linewidth(1.pt) + dotstyle); 
+dot((0.2811513070186808,1.1962050536863345),linewidth(1.pt) + dotstyle); 
+dot((1.228801280884358,0.),linewidth(1.pt) + dotstyle); 
+dot((1.228801280884358,0.),linewidth(1.pt) + dotstyle); 
+dot((0.2811513070186808,1.1962050536863345),linewidth(1.pt) + dotstyle); 
+label("$A$", (0.22441432116356555,1.3398931935374987), NE * labelscalefactor); 
+dot((2.176451254750035,0.7507412464110019),linewidth(1.pt) + dotstyle); 
+label("$B$", (2.205558937870748,0.7649727949636497), NE * labelscalefactor); 
+dot((-0.2811513070186808,-1.1962050536863345),linewidth(1.pt) + dotstyle); 
+label("$C$", (-0.45927480146479543,-1.4104016861265898), NE * labelscalefactor); 
+dot((2.1372297062287133,-0.7588909487495473),linewidth(1.pt) + dotstyle); 
+label("$D$", (2.0812518246655913,-1.0297111519357978), NE * labelscalefactor); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* re-scale y/x */
+currentpicture = yscale(1.0047562425683711) * currentpicture; 
+ /* end of picture */
+\end{asy}
+\end{example}
+
+Analysis: To prove $AC=CD$, it is hard to find the relation between them, we need to find a way to prove both of them are equal to third quantity.
+Since $CD$ is the tangent line of $\odot O_2$, it is naturally to think to use the tangent-secant theorem to solve this problem. But there is no a secant in the figure,
+so we need to make an auxiliary secant. Observing three points $C, P, $ and $B$, if they are collinear, then we will have $CD^2=CP\cdot CB$, as long as we can prove $AC^2=CP\cdot CB$, then the proof will follow.
+To prove $C, P, $ and $B$ are collinear, we only need to prove $\angle APC+\angle APB=180^\circ$. Since $AC$ is the diameter of $\odot O_1$, we have $\angle APC=90^\circ$, so we only need to prove $
+\angle APB=90^\circ$, which is  the same as to prove $\triangle APB$ is a right triangle. By the example 32 of "simple questions" we have $\angle APB=90^\circ$. Now we only need to prove
+$AC^2=CP\cdot CB$. It is easy to see that from  the projection theorem within the right $\triangle ACB$.
+
+Proof: Omitted
+
+
+From example 1 to example 10, we have applied the analyses of proving "simple questions", logic thinking and ways of adding auxiliary lines many times.
+In example 11 and 12, we got the same kind of questions as the "simple questions" through analyses, then we applied directly the conclusions from "simple questions" to solve them.
+This way, usually we can simplify the proof. So, the ways of thinking and  the the methods for adding the auxiliary lines for the "simple questions" are the base of proving complicated questions, and
+some conclusions are the theoretic bases of proving the "complicated questions". 
+This is not absolute like this, sometime, the conclusions from "complicated questions" are the theoretic bases of "simple questions". For example, the example 14  in "simple questions", states
+"If $P$ is a point in the arc $\widearc{BC}$ of the  circumcircle of an equilateral triangle $ABC$, then $PA=PB+PC$."
+
+\begin{asy}
+ /* Geogebra to Asymptote conversion, documentation at artofproblemsolving.com/Wiki go to User:Azjps/geogebra */
+import graph; size(6.cm); 
+real labelscalefactor = 0.5; /* changes label-to-point distance */
+pen dps = linewidth(0.7) + fontsize(10); defaultpen(dps); /* default pen style */ 
+pen dotstyle = black; /* point style */ 
+real xmin = -4.172949808468847, xmax = 3.7050134909079486, ymin = -1.9930912792757605, ymax = 4.54080135857028;  /* image dimensions */
+pen zzttqq = rgb(0.6,0.2,0.); 
+
+draw((-1.2905786210242798,0.7572036003883279)--(0.4807977421492009,0.7727419895389724)--(-0.41834707917588565,2.299029725135174)--cycle, linewidth(2.) + zzttqq); 
+ /* draw figures */
+draw((-1.2905786210242798,0.7572036003883279)--(0.4807977421492009,0.7727419895389724), linewidth(2.) + zzttqq); 
+draw((0.4807977421492009,0.7727419895389724)--(-0.41834707917588565,2.299029725135174), linewidth(2.) + zzttqq); 
+draw((-0.41834707917588565,2.299029725135174)--(-1.2905786210242798,0.7572036003883279), linewidth(2.) + zzttqq); 
+draw(shift((-0.40937598601698827,1.2763251050208249)) * scale(1.0227439662572941, 1.0227439662572941)*unitcircle, linewidth(2.)); 
+draw((-0.41834707917588565,2.299029725135174)--(-0.18706579140650054,0.2780348677210963), linewidth(2.)); 
+draw((-0.18706579140650054,0.2780348677210963)--(-1.2905786210242798,0.7572036003883279), linewidth(2.)); 
+draw((0.4807977421492009,0.7727419895389724)--(-0.18706579140650054,0.2780348677210963), linewidth(2.)); 
+ /* dots and labels */
+dot((-1.2905786210242798,0.7572036003883279),linewidth(1.pt) + dotstyle); 
+label("$C$", (-1.5003468745579815,0.6018197088818822), NE * labelscalefactor); 
+dot((0.4807977421492009,0.7727419895389724),linewidth(1.pt) + dotstyle); 
+label("$B$", (0.47302854757387863,0.5474353468546262), NE * labelscalefactor); 
+dot((-0.41834707917588565,2.299029725135174),linewidth(1.pt) + dotstyle); 
+label("$A$", (-0.47481319061544,2.404272850356652), NE * labelscalefactor); 
+dot((-0.18706579140650054,0.2780348677210963),linewidth(1.pt) + dotstyle); 
+label("$P$", (-0.3582752719856057,0.011360921157388636), NE * labelscalefactor); 
+clip((xmin,ymin)--(xmin,ymax)--(xmax,ymax)--(xmax,ymin)--cycle); 
+ /* re-scale y/x */
+currentpicture = yscale(0.9987277051129608) * currentpicture; 
+ /* end of picture */
+\end{asy}
+
+Since $ABPC$ is a cyclic quadrilateral, and the conclusion is to prove the diagonal $PA$ equals to the sum of two sides $PB$ and $PC$, it makes us to think about
+to use Ptolemy theorem, i.e. "For a cyclic quadrilateral, the sum of the products of the opposite sides is equal to the product of two diagonals".
+Apply this theorem directly and no need to add any auxiliary lines we can get the conclusion. We divide the length of the equilateral triangle in both sides of
+$PA\cdot BC=PC\cdot AB+PB\cdot AC$, will get the conclusion $PA=PB+PC$ directly.
+
+Now we come to the end of adding auxiliary lines. From above we can see that the knowledge of proving geometric problems is very rich, the methodologies of 
+proving is very agile. The ways of thinking between simple questions and complex questions are mutual penetrated, intervened.  In general, there is no a standard to 
+classifying some question to be simple questions, and others are complicated questions. In this pamphlet, we do so is trying to clearly, conveniently explain the way of thinking in a 
+  way from shallow to deep. The purpose is to let the reader understanding how to convert a complicated question into simple questions, hence  gradually obtain the different ways of 
+adding auxiliary lines.
+
+\end{document}

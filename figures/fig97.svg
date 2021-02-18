@@ -69,10 +69,10 @@
 <path clip-path='url(#clip1)' d='M 28.0546 -50.6791L 27.8853 29.2771' fill='none' stroke='#000000' stroke-dasharray='3.19826,3.19826' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10.0375' stroke-width='0.803'/>
 </g>
 <g transform='matrix(0.996264 0 0 0.996264 248.304 115.668)'>
-<circle clip-path='url(#clip1)' cx='-120.91' cy='-0' fill='#000000' r='0.5'/>
+<circle clip-path='url(#clip1)' cx='-120.91' cy='-0' fill='#000000' r='1'/>
 </g>
 <g transform='matrix(0.996264 0 0 0.996264 248.304 115.668)'>
-<circle clip-path='url(#clip1)' cx='60.455' cy='-0' fill='#000000' r='0.5'/>
+<circle clip-path='url(#clip1)' cx='60.455' cy='-0' fill='#000000' r='1'/>
 </g>
 <g transform='matrix(0.996264 0 0 0.996264 248.304 115.668)'>
 <circle clip-path='url(#clip1)' cx='-179.27' cy='15.6801' fill='#000000' r='0.5'/>
@@ -105,9 +105,9 @@
 <circle clip-path='url(#clip1)' cx='-155.12' cy='49.8139' fill='#000000' r='0.5'/>
 </g>
 </g>
-<use x='113.405388' y='118.280113' xlink:href='#g1-79'/>
-<use x='295.293498' y='124.20481' xlink:href='#g1-79'/>
-<use x='303.169513' y='120.589446' xlink:href='#g0-48'/>
+<use x='113.405388' y='117.09518' xlink:href='#g1-79'/>
+<use x='295.293498' y='123.019877' xlink:href='#g1-79'/>
+<use x='303.169513' y='119.404513' xlink:href='#g0-48'/>
 <use x='57.713263' y='137.831612' xlink:href='#g1-66'/>
 <use x='187.464063' y='140.201494' xlink:href='#g1-67'/>
 <use x='128.217123' y='140.793953' xlink:href='#g1-97'/>

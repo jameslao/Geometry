@@ -2,11 +2,13 @@
 
 This is a project initiated by Dr. Kai Zhu to translate this booklet on how to use auxiliary lines in planar geometry problems into English.
 
+[Preview the book](https://nbviewer.jupyter.org/github/jameslao/Geometry/blob/main/Auxiliary%20Lines.ipynb)
+
 If you are interested in helping with the project, please read on.
 
 ## The Notebook
 
-To work on the project, you can open the Jupyter Notebook, e.g. with [Google CoLab](https://colab.research.google.com/github/jameslao/Geometry/blob/main/Auxiliary%20Lines.ipynb) or your local [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html) or [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html). If you need a separate hosted Jupyter environment, please contact the author.
+To work on the project, you can open the Jupyter Notebook, e.g. with [Google CoLab](https://colab.research.google.com/github/jameslao/Geometry/blob/main/Auxiliary%20Lines.ipynb) or your local [Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install.html) or [Jupyter Lab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html). If you need a self-hosted Jupyter environment, please contact the author.
 
 ## Git
 
